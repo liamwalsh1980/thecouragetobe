@@ -16,11 +16,14 @@
     <!-- Head tab icon using https://gauger.io/fonticon/-->
     <link rel="icon" type="image/ico" href="static/images/favicon-head-icon.ico" />
     <!-- Local script for CSS -->
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css">
+    <!-- <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css"> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hind:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" 
         integrity="sha512-wnea99uKIC3TJF7v4eKk4Y+lMz2Mklv18+r4na2Gn1abDRPPOeef95xTzdwGD9e6zXJBteMIhZ1+68QC5byJZw==" 
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>thecouragetobe </title>
+    <title>thecouragetobe</title>
     <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/2.3.0/alpine.js" 
         integrity="sha512-nIwdJlD5/vHj23CbO2iHCXtsqzdTTx3e3uAmpTm4x2Y8xCIFyWu4cSIV8GaGe2UNVq86/1h9EgUZy7tn243qdA==" 
@@ -34,15 +37,20 @@
 </head>
 
 <body class="bg-gray-300">
+    <style>
+        body {
+          font-family: "Hind", sans-serif;
+        }
+    </style>
     <header class="bg-white">
         <!-- Main Navbar -->
-        <div class="py-2 flex items-center justify-around max-w-screen-2xl container mx-auto px-2 hidden lg:flex">
+        <div class="py-2 flex items-center justify-between max-w-screen-2xl mx-auto px-4 hidden lg:flex">
             <div class="space-y-1">
                 <h1 class="text-2xl font-bold">thecouragetobe.org</h1>
                 <h2>Brian Walsh Counselling</h2>
             </div>
             <nav>
-                <ul class="flex space-x-8 text-red-500 text-xs"> 
+                <ul class="flex space-x-2 lg:space-x-8 text-purple-700 text-sm lg:text-xs xl:text-sm"> 
                     <li><a aria-label="Proctors Model" href="{{ url_for('index') }}">Home</a></li>
                     <div class="border border-l border-black"></div>
                     <li><a aria-label="Proctors Model" href="">What is Counselling</a></li>
@@ -55,26 +63,22 @@
                 </ul>
             </nav>
         </div>
-
-    
         <!-- Mobile sidenav -->
-        <div>
-            <div class="py-2 flex justify-between container mx-auto px-4 lg:hidden">
+        <div x-data="{ open: true }">
+            <div class="py-2 flex justify-between mx-auto px-4 lg:hidden">
                 <div class="space-y-1">
                     <h1 class="text-2xl font-bold">thecouragetobe.org</h1>
                     <h2>Brian Walsh Counselling</h2>
                 </div>
-                <nav class="mt-2">
-                    <button type="button"
-                        class="inline-flex items-center justify-center
-                        focus:outline-none focus:ring-inset focus:ring-white"
-                        aria-controls="mobile-menu"
-                        aria-expanded="false"
-                        @click="expanded = ! expanded"
-                        @keydown.escape="expanded = true">
+                <nav id="top" class="lg:hidden mt-2">
+                    <button 
+                        type="button"
+                        @click="open = ! open"
+                        @keydown.escape="open = true">
                     <span class="sr-only">Open main menu</span>
-                        <svg x-show="expanded"
-                            class="h-6 w-6 sm:w-8 sm:h-8 text-black"
+                        <svg x-show="open"
+                        
+                            class="h-8 w-8 sm:w-10 sm:h-10 text-black"
                             xmlns="http://www.w3.org/2000/svg"
                             fill="none"
                             viewBox="0 0 24 24"
@@ -85,8 +89,9 @@
                                 stroke-width="2"
                                 d="M4 6h16M4 12h16M4 18h16" />
                         </svg>
-                        <svg x-show="! expanded"
-                            class="h-6 w-6 sm:w-8 sm:h-8 text-black"
+                        <svg x-show="! open"
+                        
+                            class="h-8 w-8 sm:w-10 sm:h-10 text-black"
                             xmlns="http://www.w3.org/2000/svg"
                             fill="none"
                             viewBox="0 0 24 24"
@@ -100,9 +105,19 @@
                     </button>
                 </nav>
             </div>
+            <!-- Mobile Dropdown -->
+            <div class="bg-white w-full max-w-screen-2xl mx-auto px-4 text-center py-8" 
+            x-show="! open" @click.outside="open = true">
+                <ul class="flex flex-col text-purple-700 text-sm lg:text-xs xl:text-sm space-y-4"> 
+                    <li><a aria-label="Proctors Model" href="{{ url_for('index') }}">Home</a></li>
+                    <li><a aria-label="Proctors Model" href="">What is Counselling</a></li>
+                    <li><a aria-label="Proctors Model" href="">Supervision and Staff Care</a></li>
+                    <li><a aria-label="Proctors Model" href="">Contact and Fees</a></li>
+                    <li><a aria-label="Proctors Model" href="{{ url_for('protecting_you') }}">Protecting You</a></li>
+                </ul>
+            </div>
         </div>
     </header>
-    <br>
     <main>
         {% block content %}
         {% endblock %}
