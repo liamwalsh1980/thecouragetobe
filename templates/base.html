@@ -20,10 +20,15 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Hind:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" 
+    <link rel="icon" type="image/ico" href="static/images/favicon.png" />
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" 
         integrity="sha512-wnea99uKIC3TJF7v4eKk4Y+lMz2Mklv18+r4na2Gn1abDRPPOeef95xTzdwGD9e6zXJBteMIhZ1+68QC5byJZw==" 
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.css" 
+        integrity="sha512-vA/fpEI8+rrDsPceGG+Rz4NBhaNE4lvJ8CrNfspqDQi6uyIs82Hwr8gm/E+SRs+ZKjJ2ihOdb6esDSAuJrWOhg==" 
+        crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
     <title>thecouragetobe</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/2.3.0/alpine.js" 
         integrity="sha512-nIwdJlD5/vHj23CbO2iHCXtsqzdTTx3e3uAmpTm4x2Y8xCIFyWu4cSIV8GaGe2UNVq86/1h9EgUZy7tn243qdA==" 
@@ -46,11 +51,11 @@
         <!-- Main Navbar -->
         <div class="max-w-screen-xl mx-auto px-8 py-4 flex items-center justify-between hidden lg:flex">
             <div>
-                <h1 class="text-2xl font-bold">thecouragetobe.org</h1>
-                <h2>Brian Walsh Counselling</h2>
+                <h1 class="text-2xl font-bold text-purple-900">thecouragetobe.org</h1>
+                <h2 class="text-purple-700">Brian Walsh Counselling</h2>
             </div>
             <nav>
-                <ul class="flex space-x-2 lg:space-x-8 text-purple-500 text-sm lg:text-xs xl:text-sm"> 
+                <ul class="flex space-x-2 lg:space-x-8 text-purple-700 text-sm lg:text-xs xl:text-sm"> 
                     <li class="hover:opacity-50"><a aria-label="Proctors Model" href="{{ url_for('index') }}">Home</a></li>
                     <div class="border border-l border-black"></div>
                     <li class="hover:opacity-50"><a aria-label="Proctors Model" href="">What is Counselling</a></li>
@@ -67,8 +72,8 @@
         <div x-data="{ open: true }">
             <div class="py-2 flex justify-between px-4 lg:hidden">
                 <div>
-                    <h1 class="text-2xl font-bold">thecouragetobe.org</h1>
-                    <h2>Brian Walsh Counselling</h2>
+                    <h1 class="text-2xl font-bold text-purple-900">thecouragetobe.org</h1>
+                    <h2 class="text-purple-700">Brian Walsh Counselling</h2>
                 </div>
                 <nav id="top" class="lg:hidden mt-2">
                     <button 
@@ -108,7 +113,7 @@
             <!-- Mobile Dropdown -->
             <div class="bg-white w-full text-center py-8" 
             x-show="! open" @click.outside="open = true">
-                <ul class="flex flex-col text-purple-500 text-sm lg:text-xs xl:text-sm space-y-4"> 
+                <ul class="flex flex-col text-purple-700 text-sm lg:text-xs xl:text-sm space-y-4"> 
                     <li class="hover:opacity-50"><a aria-label="Proctors Model" href="{{ url_for('index') }}">Home</a></li>
                     <li class="hover:opacity-50"><a aria-label="Proctors Model" href="">What is Counselling</a></li>
                     <li class="hover:opacity-50"><a aria-label="Proctors Model" href="">Supervision and Staff Care</a></li>

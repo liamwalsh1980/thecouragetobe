@@ -20,3 +20,19 @@ Text sizes
     - text-4xl (36px)
     - text-5xl (48px)
     - text-6xl (60px) used */
+
+
+#hero-image {
+    background: url("../images/purple-background.jpg") no-repeat center center;  
+    width: 100%;
+    background-size: cover; 
+    padding: 0;
+}
+
+#hero-image2 {
+    background: url("../images/") no-repeat center center; 
+    background-size: cover;
+    min-height: 360px;
+    width: 100%;
+}
+    

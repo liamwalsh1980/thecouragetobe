@@ -2,20 +2,22 @@
 {% block content %}
 
     <!-- Subheader text -->
-    <section class="bg-purple-500 h-96">
-        <div class="max-w-screen-xl mx-auto px-8 text-center h-96 space-y-1 flex flex-col justify-center">
-            <h1 class="text-lg md:text-2xl font-bold">
-                Welcome to Brian Walsh Counselling
-            </h1>
-            <h2 class="text-sm md:text-base pb-4">
-                Brian Walsh Dip. Couns. Reg.MBACP
-            </h2>
-            <h1 class="text-lg md:text-2xl font-bold">
-                The Mission:
-            </h1>
-            <h2 class="text-sm md:text-base italic">
-                “To meet empathically in the ‘here and now’, make sense of the past and choose an authentic future”
-            </h2>
+    <section>
+        <div id="hero-image">
+            <div class="max-w-screen-xl mx-auto px-8 text-center h-96 space-y-1 flex flex-col justify-center"> 
+                <h1 class="text-lg md:text-2xl font-bold">
+                    Welcome to Brian Walsh Counselling
+                </h1>
+                <h2 class="text-sm md:text-base pb-4">
+                    Brian Walsh Dip. Couns. Reg.MBACP
+                </h2>
+                <h1 class="text-lg md:text-2xl font-bold">
+                    The Mission:
+                </h1>
+                <h2 class="text-sm md:text-base italic">
+                    “To meet empathically in the ‘here and now’, make sense of the past and choose an authentic future”
+                </h2>
+            </div>
         </div>
     </section>
     <section class="bg-white">
@@ -49,13 +51,15 @@
         </div>
     </section>
     <section class="bg-white">
-        <div class="max-w-screen-xl mx-auto px-8 pb-8 flex flex-col items-center md:flex-row md:justify-center md:space-x-24 lg:space-x-48 md:space-y-0">
-            <div class="flex flex-col items-center my-4 md:my-0 pb-8 md:pb-0">
-                <div class="w-36 h-36 bg-purple-300 rounded-full flex items-center justify-center">
+        <div class="max-w-screen-xl mx-auto px-8 pb-8 flex flex-col items-center md:flex-row md:justify-center md:space-x-24 lg:space-x-52 md:space-y-0">
+            <div class="flex flex-col items-center pb-8 md:pb-0">
+                <div class="w-36 h-36 rounded-full flex items-center justify-center 
+                bg-gradient-to-br from-violet-900 to-pink-800 via-pink-400
+                md:bg-gradient-to-br md:from-violet-900 md:to-pink-200 md:via-pink-400">
                     <i class="fa-solid fa-award text-6xl"></i>
                 </div>
                 <div class="text-lg md:text-2xl font-bold my-2">My Qualifications</div>
-                <ul class="text-center space-y-2">
+                <ul class="text-sm lg:text-base text-center space-y-2">
                     <li>Level 3 Certificate in Counselling Skills and Theory</li>
                     <li>Level 4 Diploma in Integrative Counselling</li>
                     <li>Diploma in Supervision</li>
@@ -64,31 +68,32 @@
                     <li>Certificate in Solution-Focused Brief Therapy</li>
                 </ul>
             </div>
-
+            
             <div class="flex flex-col items-center">
-                <div class="w-36 h-36 bg-purple-700 rounded-full flex items-center justify-center">
+                <div class="w-36 h-36 rounded-full flex items-center justify-center bg-gradient-to-t from-sky-700 to-orange-200 via-gray-400">
                     <i class="fa-solid fa-heart text-6xl"></i>
                 </div>
                 <div class="text-lg md:text-2xl font-bold my-2">Keeping You Safe</div>
-                <ul class="text-center space-y-2">
+                <ul class="text-sm lg:text-base text-center space-y-2">
                     <li>I am a registered member (103666) of BA​​CP <br>and adhere to its Ethical Framework​</li>
                     <li>I receive regular clinical supervision</li>
                     <li>I hold appropriate public liability insurance</li>
                     <li>Certificate in Spiritual Care</li>
                     <li>I am committed to regular Continuing Professional</li>
                     <li></li>
+
                 </ul>
             </div>
         </div>
     </section>
     <section class="bg-white">
         <div class="max-w-screen-xl mx-auto flex justify-center">
-            <img class="md:w-11/12" src="{{ ('static/images/pebbles-background.jpg') }}" alt="">
+            <img class="w-full md:w-3/4" src="{{ ('static/images/pebbles-background.jpg') }}" alt="pebble stepping stones">
         </div>
     </section>
-    <section class="bg-white">
-        <div class="max-w-screen-xl mx-auto p-8 text-center flex flex-col md:flex-row items-center">
-            <div class="pb-8 md:pb-0 space-y-8 md:w-2/3">
+    <section class="bg-white ">
+        <div class="max-w-screen-xl mx-auto p-8 text-center flex flex-col lg:flex-row items-center">
+            <div class="pb-8 lg:pb-0 space-y-8 lg:w-3/4">
                 <div class="text-lg md:text-2xl font-bold my-2">What is Counselling ?</div>
                 <p>
                     The British Association for Counselling and Psychotherapy (BACP) defines counselling and psychotherapy as:
@@ -110,14 +115,14 @@
                     exploration.  
                 </p> 
             </div>
-            <div class="max-w-screen-xl mx-auto flex justify-center">
-                <img class="w-56 h-56" src="{{ ('static/images/what-is-counselling.png') }}" alt="Empathy, Congruence and Unconditional positive regard"> 
+            <div class="lg:pl-12 flex justify-center">
+                <img class="w-40 md:w-52 h-40 md:h-52" src="{{ ('static/images/what-is-counselling.png') }}" alt="Empathy, Congruence and Unconditional positive regard"> 
             </div>
         </div>
     </section>
-    <section class="bg-purple-500">
-        <div class="">
-            <img class="" src="{{ ('static/images/green-background.jpg') }}" alt="">
+    <section class="bg-white">
+        <div class="max-w-screen-xl mx-auto flex justify-center">
+            <img class="w-full md:w-3/4" src="{{ ('static/images/green-background.jpg') }}" alt="pebbles stacked up">
         </div>
     </section>
     <section>
