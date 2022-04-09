@@ -16,7 +16,7 @@
     <!-- Head tab icon using https://gauger.io/fonticon/-->
     <link rel="icon" type="image/ico" href="static/images/favicon-head-icon.ico" />
     <!-- Local script for CSS -->
-    <!-- <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css"> -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Hind:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -44,13 +44,13 @@
     </style>
     <header class="bg-white">
         <!-- Main Navbar -->
-        <div class="py-2 flex items-center justify-between max-w-screen-2xl mx-auto px-4 hidden lg:flex">
+        <div class="max-w-screen-xl mx-auto px-8 py-4 flex items-center justify-between hidden lg:flex">
             <div>
                 <h1 class="text-2xl font-bold">thecouragetobe.org</h1>
                 <h2>Brian Walsh Counselling</h2>
             </div>
             <nav>
-                <ul class="flex space-x-2 lg:space-x-8 text-purple-700 text-sm lg:text-xs xl:text-sm"> 
+                <ul class="flex space-x-2 lg:space-x-8 text-purple-500 text-sm lg:text-xs xl:text-sm"> 
                     <li class="hover:opacity-50"><a aria-label="Proctors Model" href="{{ url_for('index') }}">Home</a></li>
                     <div class="border border-l border-black"></div>
                     <li class="hover:opacity-50"><a aria-label="Proctors Model" href="">What is Counselling</a></li>
@@ -106,14 +106,14 @@
                 </nav>
             </div>
             <!-- Mobile Dropdown -->
-            <div class="bg-white w-full max-w-screen-2xl text-center py-8" 
+            <div class="bg-white w-full text-center py-8" 
             x-show="! open" @click.outside="open = true">
-                <ul class="flex flex-col text-purple-700 text-sm lg:text-xs xl:text-sm space-y-4"> 
-                    <li><a aria-label="Proctors Model" href="{{ url_for('index') }}">Home</a></li>
-                    <li><a aria-label="Proctors Model" href="">What is Counselling</a></li>
-                    <li><a aria-label="Proctors Model" href="">Supervision and Staff Care</a></li>
-                    <li><a aria-label="Proctors Model" href="">Contact and Fees</a></li>
-                    <li><a aria-label="Proctors Model" href="{{ url_for('protecting_you') }}">Protecting You</a></li>
+                <ul class="flex flex-col text-purple-500 text-sm lg:text-xs xl:text-sm space-y-4"> 
+                    <li class="hover:opacity-50"><a aria-label="Proctors Model" href="{{ url_for('index') }}">Home</a></li>
+                    <li class="hover:opacity-50"><a aria-label="Proctors Model" href="">What is Counselling</a></li>
+                    <li class="hover:opacity-50"><a aria-label="Proctors Model" href="">Supervision and Staff Care</a></li>
+                    <li class="hover:opacity-50"><a aria-label="Proctors Model" href="">Contact and Fees</a></li>
+                    <li class="hover:opacity-50"><a aria-label="Proctors Model" href="{{ url_for('protecting_you') }}">Protecting You</a></li>
                 </ul>
             </div>
         </div>

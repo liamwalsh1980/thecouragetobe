@@ -2,24 +2,24 @@
 {% block content %}
 
     <!-- Subheader text -->
-    <section class="bg-purple-300 h-96">
-        <div class="max-w-screen-2xl mx-auto px-4 text-center h-96 space-y-1 flex flex-col justify-center">
-            <h1 class="text-2xl font-bold">
+    <section class="bg-purple-500 h-96">
+        <div class="max-w-screen-xl mx-auto px-8 text-center h-96 space-y-1 flex flex-col justify-center">
+            <h1 class="text-lg md:text-2xl font-bold">
                 Welcome to Brian Walsh Counselling
             </h1>
-            <h2 class="pb-4">
+            <h2 class="text-sm md:text-base pb-4">
                 Brian Walsh Dip. Couns. Reg.MBACP
             </h2>
-            <h1 class="text-2xl font-bold">
+            <h1 class="text-lg md:text-2xl font-bold">
                 The Mission:
             </h1>
-            <h2>
+            <h2 class="text-sm md:text-base italic">
                 “To meet empathically in the ‘here and now’, make sense of the past and choose an authentic future”
             </h2>
         </div>
     </section>
     <section class="bg-white">
-        <div class="max-w-screen-lg mx-auto px-12 text-center py-4 space-y-8">
+        <div class="max-w-screen-xl mx-auto p-8 text-center space-y-8">
             <p>
                 I am qualified at diploma level in Integrative counselling. This means that we will draw upon techniques 
                 from a variety of models and approaches as we explore issues that you, the client, may bring to therapy.
@@ -47,13 +47,14 @@
                 I practice in South-West Birmingham as well as meeting clients in their place of work or other suitable settings. I do home visits. 
             </p> 
         </div>
-
-        <div class="flex flex-col items-center md:flex-row md:justify-center md:py-4 md:space-x-24 lg:space-x-48 md:space-y-0 pb-4 max-w-screen-lg mx-auto px-4">
-            <div class="flex flex-col items-center my-4 md:my-0">
+    </section>
+    <section class="bg-white">
+        <div class="max-w-screen-xl mx-auto px-8 pb-8 flex flex-col items-center md:flex-row md:justify-center md:space-x-24 lg:space-x-48 md:space-y-0">
+            <div class="flex flex-col items-center my-4 md:my-0 pb-8 md:pb-0">
                 <div class="w-36 h-36 bg-purple-300 rounded-full flex items-center justify-center">
                     <i class="fa-solid fa-award text-6xl"></i>
                 </div>
-                <div class="text-2xl font-bold my-2">My Qualifications</div>
+                <div class="text-lg md:text-2xl font-bold my-2">My Qualifications</div>
                 <ul class="text-center space-y-2">
                     <li>Level 3 Certificate in Counselling Skills and Theory</li>
                     <li>Level 4 Diploma in Integrative Counselling</li>
@@ -68,26 +69,56 @@
                 <div class="w-36 h-36 bg-purple-700 rounded-full flex items-center justify-center">
                     <i class="fa-solid fa-heart text-6xl"></i>
                 </div>
-                <div class="text-2xl font-bold my-2">My Qualifications</div>
+                <div class="text-lg md:text-2xl font-bold my-2">Keeping You Safe</div>
                 <ul class="text-center space-y-2">
                     <li>I am a registered member (103666) of BA​​CP <br>and adhere to its Ethical Framework​</li>
                     <li>I receive regular clinical supervision</li>
                     <li>I hold appropriate public liability insurance</li>
                     <li>Certificate in Spiritual Care</li>
-                    <li>I am committed to regular Continuing Professional </li>
+                    <li>I am committed to regular Continuing Professional</li>
+                    <li></li>
                 </ul>
             </div>
         </div>
     </section>
-    <section>
-        Qualifications and Keeping you safe
+    <section class="bg-white">
+        <div class="max-w-screen-xl mx-auto flex justify-center">
+            <img class="md:w-11/12" src="{{ ('static/images/pebbles-background.jpg') }}" alt="">
+        </div>
     </section>
-        Image
-    <section>
-        What is counselling
+    <section class="bg-white">
+        <div class="max-w-screen-xl mx-auto p-8 text-center flex flex-col md:flex-row items-center">
+            <div class="pb-8 md:pb-0 space-y-8 md:w-2/3">
+                <div class="text-lg md:text-2xl font-bold my-2">What is Counselling ?</div>
+                <p>
+                    The British Association for Counselling and Psychotherapy (BACP) defines counselling and psychotherapy as:
+                </p>
+                <p class="italic">
+                    "...umbrella terms that cover a range of talking therapies. They are delivered by trained practitioners who 
+                    work with people over a short or long term to help them bring about effective change or enhance their well-being."
+                </p>
+                <p>
+                    The aim of a professionally trained counsellor is to help clients to uncover feelings, memories, judgements 
+                    (self and by others) that are somehow preventing a more fulfilled, self-accepting life.
+                </p>
+            
+                <p>
+                    To anyone new to counselling this may sound a daunting prospect and the fear and anxiety of engaging with an ‘expert’ 
+                    may seem overwhelming. Having sat in both chairs, so to speak, I understand the possible fears of being 'overpowered' 
+                    as well as the dread of being judged. An effective and self-aware counsellor will work hard to ensure that she or he 
+                    doesn't add to your difficulties by being judgemental or overbearing. However, these feelings can be useful areas for 
+                    exploration.  
+                </p> 
+            </div>
+            <div class="max-w-screen-xl mx-auto flex justify-center">
+                <img class="w-56 h-56" src="{{ ('static/images/what-is-counselling.png') }}" alt="Empathy, Congruence and Unconditional positive regard"> 
+            </div>
+        </div>
     </section>
-    <section>
-        Image
+    <section class="bg-purple-500">
+        <div class="">
+            <img class="" src="{{ ('static/images/green-background.jpg') }}" alt="">
+        </div>
     </section>
     <section>
         Supervision and Staff Care
