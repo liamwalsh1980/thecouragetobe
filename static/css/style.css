@@ -24,6 +24,7 @@ Text sizes
 
 #hero-image {
     background: url("../images/purple-background.jpg") no-repeat center center;  
+    
     width: 100%;
     background-size: cover; 
     padding: 0;
