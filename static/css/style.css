@@ -30,10 +30,6 @@ Text sizes
     padding: 0;
 }
 
-#hero-image2 {
-    background: url("../images/") no-repeat center center; 
-    background-size: cover;
-    min-height: 360px;
-    width: 100%;
+#hr {
+    background-color: red;
 }
-    

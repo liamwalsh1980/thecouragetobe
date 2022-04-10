@@ -54,7 +54,7 @@
         <div class="max-w-screen-xl mx-auto px-8 pb-8 flex flex-col items-center md:flex-row md:justify-center md:space-x-24 lg:space-x-52 md:space-y-0">
             <div class="flex flex-col items-center pb-8 md:pb-0">
                 <div class="w-36 h-36 rounded-full flex items-center justify-center bg-gradient-to-br from-violet-900 to-pink-800 via-pink-400">
-                    <i class="fa-solid fa-award text-6xl"></i>
+                    <i class="fa-solid fa-award text-6xl text-indigo-800"></i>
                 </div>
                 <div class="text-lg md:text-2xl font-bold my-2">My Qualifications</div>
                 <ul class="text-sm lg:text-base text-center space-y-2">
@@ -69,7 +69,7 @@
             
             <div class="flex flex-col items-center">
                 <div class="w-36 h-36 rounded-full flex items-center justify-center bg-gradient-to-t from-sky-700 to-orange-200 via-gray-400">
-                    <i class="fa-solid fa-heart text-6xl"></i>
+                    <i class="fa-solid fa-shield-heart text-6xl text-indigo-800"></i>
                 </div>
                 <div class="text-lg md:text-2xl font-bold my-2">Keeping You Safe</div>
                 <ul class="text-sm lg:text-base text-center space-y-2">
@@ -86,12 +86,12 @@
     </section>
 
     <section class="bg-white">
-        <div class="max-w-screen-xl mx-auto px-4 md:px-0 flex flex-col justify-center w-full md:w-11/12 lg:w-5/6 xl:w-3/4">
+        <div class="max-w-screen-xl mx-auto px-4 md:px-0 flex flex-col justify-center w-full md:w-5/6 lg:w-3/4 xl:w-2/3">
             <div class="flex justify-center">
                 <img src="{{ ('static/images/pebbles-background.jpg') }}" alt="pebble stepping stones">
             </div>
             <div>
-                <p class="text-xs">Pebble stepping stones</p>
+                <p class="text-xs lg:text-sm">Pebble stepping stones</p>
             </div>
         </div>
     </section>
@@ -102,9 +102,9 @@
         </div>
     </section> -->
 
-    <section class="bg-white ">
+    <section class="bg-white" id="welcome">
         <div class="max-w-screen-xl mx-auto p-8 text-center flex flex-col lg:flex-row items-center">
-            <div class="pb-8 lg:pb-0 space-y-8 lg:w-3/4">
+            <div class="pb-8 lg:pb-0 space-y-8 w-full">
                 <div class="text-lg md:text-2xl font-bold my-2">What is Counselling ?</div>
                 <p>
                     The British Association for Counselling and Psychotherapy (BACP) defines counselling and psychotherapy as:
@@ -126,19 +126,16 @@
                     exploration.  
                 </p> 
             </div>
-            <div class="lg:pl-12 flex justify-center">
-                <img class="w-40 md:w-52 h-40 md:h-52" src="{{ ('static/images/what-is-counselling.png') }}" alt="Empathy, Congruence and Unconditional positive regard"> 
+            <div class="lg:pl-20 flex justify-center w-1/2">
+                <img class="w-40 md:w-56 h-40 md:h-56" src="{{ ('static/images/what-is-counselling.png') }}" alt="Empathy, Congruence and Unconditional positive regard"> 
             </div>
         </div>
     </section>
 
     <section class="bg-white">
-        <div class="max-w-screen-xl mx-auto px-4 md:px-0 flex flex-col justify-center w-full md:w-11/12 lg:w-5/6 xl:w-3/4">
+        <div class="max-w-screen-xl mx-auto px-4 md:px-0 flex flex-col justify-center w-full md:w-5/6 lg:w-3/4 xl:w-2/3">
             <div class="flex justify-center">
                 <img src="{{ ('static/images/green-background.jpg') }}" alt="pebbles stacked up">
-            </div>
-            <div>
-                <p class="text-xs">Pebbles stacked up</p>
             </div>
         </div>
     </section>
@@ -149,9 +146,56 @@
         </div>
     </section> -->
 
-    <section>
-        Supervision and Staff Care
+    <section class="">
+        <div class="max-w-screen-xl mx-auto p-8 text-center flex flex-col lg:flex-row items-center">
+            <div class="pb-8 lg:pb-0 space-y-8 w-full text-center">
+                <div class="">
+                    <div class="text-lg md:text-2xl font-bold my-2">Supervision and Staff Care</div>
+                    <p>
+                        Holding a Diploma in Clinical Supervision, I practice supervision and staff care within the professions of counselling 
+                        and the education sector. My experience and expertise, coupled with my chosen approach (Proctor’s Model of Clinical​ 
+                        Supervision) enables my work to be fully transferable to other professions and disciplines. The ‘Restorative’ facet of 
+                        the model is particularly effective in allowing an individual to feel empowered and valued - often all that is needed 
+                        for emotional efficacy and enhanced motivation.
+                    </p>
+                </div>
+                <div class="">
+                    <p>
+                        Working collaboratively*, we are able to:
+                    </p>
+                    <ul>
+                        <li>Reflect on and review practice​</li>
+                        <li>Discuss specific issues in depth</li>
+                        <li>Identify training and CPD needs</li>
+                        <li>Manage the emotional impact of work on the individual’s personal life and vice versa</li>
+                        <li class="italic pt-2">* I recommend monthly supervision/staff care sessions</li>
+                    </ul>
+                </div>
+                <div class="text-left">
+                    <p class="italic">
+                        “Clinical supervision has been associated with higher levels of job satisfaction, improved retention, reduced turnover 
+                        and staff effectiveness. Effective clinical supervision may increase employees’ perceptions of organisational support 
+                        and improve their commitment to an organisation’s vision and goals. It is one way for a provider to fulfil their duty 
+                        of care to staff.”<br>
+                        <span class="text-xs lg:text-sm font-bold non-italic">
+                        Care Quality Commission<br>
+                        Supporting effective clinical supervision
+                        </span>
+                    </p> 
+                </div>
+            </div>
+            <div class="w-1/2">
+                <div class="lg:pl-20 flex justify-center pb-8">
+                <img class="" src="{{ ('static/images/bacp.png') }}" alt="Empathy, Congruence and Unconditional positive regard"> 
+            </div>
+            <div class="lg:pl-20 flex justify-center">
+                <img class="" src="{{ ('static/images/certified-counsellor.png') }}" alt="Empathy, Congruence and Unconditional positive regard"> 
+            </div>
+            </div>
+    
+        </div>
     </section>
+
     <section>
         Contact
     </section>
