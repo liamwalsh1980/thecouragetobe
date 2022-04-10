@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en-US" class="scroll-smooth">
 
 <head>
     <meta charset="UTF-8">
@@ -55,13 +55,13 @@
                 <ul class="flex space-x-2 lg:space-x-8 text-purple-700 text-sm lg:text-xs xl:text-sm"> 
                     <li class="hover:opacity-50"><a aria-label="Proctors Model" href="{{ url_for('index') }}">Home</a></li>
                     <div class="border border-l border-black"></div>
-                    <li class="hover:opacity-50"><a aria-label="Proctors Model" href="">What is Counselling</a></li>
+                    <li class="hover:opacity-50"><a aria-label="What is counselling" href="#counselling">What is Counselling</a></li>
                     <div class="border border-l border-black"></div>
-                    <li class="hover:opacity-50"><a aria-label="Proctors Model" href="">Supervision and Staff Care</a></li>
+                    <li class="hover:opacity-50"><a aria-label="Supervision and staff care" href="#supervision">Supervision and Staff Care</a></li>
                     <div class="border border-l border-black"></div>
-                    <li class="hover:opacity-50"><a aria-label="Proctors Model" href="">Contact and Fees</a></li>
+                    <li class="hover:opacity-50"><a aria-label="Contact and fees" href="">Contact and Fees</a></li>
                     <div class="border border-l border-black"></div>
-                    <li class="hover:opacity-50"><a aria-label="Proctors Model" href="{{ url_for('protecting_you') }}">Protecting You</a></li>
+                    <li class="hover:opacity-50"><a aria-label="Protecting you" href="{{ url_for('protecting_you') }}">Protecting You</a></li>
                 </ul>
             </nav>
         </div>
@@ -110,12 +110,16 @@
             <!-- Mobile Dropdown -->
             <div class="bg-white w-full text-center py-8" 
             x-show="! open" @click.outside="open = true">
-                <ul class="flex flex-col text-purple-700 text-sm lg:text-xs xl:text-sm space-y-4"> 
-                    <li class="hover:opacity-50"><a aria-label="Proctors Model" href="{{ url_for('index') }}">Home</a></li>
-                    <li class="hover:opacity-50"><a aria-label="Proctors Model" href="">What is Counselling</a></li>
-                    <li class="hover:opacity-50"><a aria-label="Proctors Model" href="">Supervision and Staff Care</a></li>
-                    <li class="hover:opacity-50"><a aria-label="Proctors Model" href="">Contact and Fees</a></li>
-                    <li class="hover:opacity-50"><a aria-label="Proctors Model" href="{{ url_for('protecting_you') }}">Protecting You</a></li>
+                <ul class="flex flex-col text-purple-700 space-y-4"> 
+                    <li class="hover:opacity-50"><a aria-label="Home" href="{{ url_for('index') }}">Home</a></li>
+                    <div class="border border-b border-gray-300 mx-24"></div>
+                    <li class="hover:opacity-50"><a aria-label="What is counselling" href="#counselling-mobile">What is Counselling</a></li>
+                    <div class="border border-b border-gray-300 mx-24"></div>
+                    <li class="hover:opacity-50"><a aria-label="Supervision and staff care" href="#supervision-mobile">Supervision and Staff Care</a></li>
+                    <div class="border border-b border-gray-300 mx-24"></div>
+                    <li class="hover:opacity-50"><a aria-label="Contact and fees" href="">Contact and Fees</a></li>
+                    <div class="border border-b border-gray-300 mx-24"></div>
+                    <li class="hover:opacity-50"><a aria-label="Procecting you" href="{{ url_for('protecting_you') }}">Protecting You</a></li>
                 </ul>
             </div>
         </div>
@@ -124,7 +128,7 @@
         {% block content %}
         {% endblock %}
     </main>
-    
+
     <!-- Footer -->
     <footer>
         Footer
