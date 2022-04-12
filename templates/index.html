@@ -1,9 +1,11 @@
 {% extends "base.html" %}
 {% block content %}
 
+    <!-- Hero Image, welcome message and mission statement -->
     <section class="bg-white">
         <div id="hero-image">
-            <div class="max-w-screen-xl mx-auto px-8 text-center h-96 lg:h-screen space-y-1 flex flex-col justify-center"> 
+            <div class="max-w-screen-xl mx-auto px-8 text-center py-24 sm:py-36 md:py-48 lg:py-60 xl:py-80 2xl:py-96 space-y-1 flex flex-col justify-center"> 
+            <!-- <div class="max-w-screen-xl mx-auto px-8 text-center h-96 lg:h-screen space-y-1 flex flex-col justify-center">  -->
                 <h1 class="text-lg md:text-2xl font-bold">
                     Welcome to Brian Walsh Counselling
                 </h1>
@@ -19,8 +21,12 @@
             </div>
         </div>
     </section>
+    <!-- About Brian -->
     <section class="bg-white">
         <div class="max-w-screen-xl mx-auto p-8 text-center space-y-8">
+            <h1 class="text-lg md:text-2xl font-bold">
+                    About Brian
+                </h1>
             <p>
                 I am qualified at diploma level in Integrative counselling. This means that we will draw upon techniques 
                 from a variety of models and approaches as we explore issues that you, the client, may bring to therapy.
@@ -49,6 +55,7 @@
             </p> 
         </div>
     </section>
+    <!-- Qualifications and Keeping safe -->
     <section class="bg-white">
         <div class="max-w-screen-xl mx-auto px-8 pb-8 md:pb-20 lg:pb-36 flex flex-col items-center md:flex-row md:justify-center md:space-y-0">
             <div class="flex flex-col items-center pb-8 md:pb-0 w-full md:w-1/2">
@@ -79,6 +86,7 @@
             </div>
         </div>
     </section>
+    <!-- Pebble stepping stones image -->
     <section class="bg-white" id="counselling-mobile">
         <div class="max-w-screen-xl mx-auto px-4 md:px-0 flex flex-col justify-center w-full md:w-5/6 lg:w-3/4 xl:w-2/3">
             <div class="flex justify-center">
@@ -86,23 +94,24 @@
             </div>
         </div>
     </section>
+    <!-- What is counselling and Cycle image -->
     <section class="bg-white" id="counselling">
         <div class="max-w-screen-xl mx-auto p-8 text-center flex flex-col lg:flex-row items-center">
             <div class="pb-8 lg:pb-0 space-y-8 w-full">
                 <div class="text-lg md:text-2xl font-bold my-2">What is Counselling ?</div>
-                <p>
+                <p class="lg:text-left">
                     The British Association for Counselling and Psychotherapy (BACP) defines counselling and psychotherapy as:
                 </p>
-                <p class="italic">
+                <p class="italic lg:text-left">
                     "...umbrella terms that cover a range of talking therapies. They are delivered by trained practitioners who 
                     work with people over a short or long term to help them bring about effective change or enhance their well-being."
                 </p>
-                <p>
+                <p class="lg:text-left">
                     The aim of a professionally trained counsellor is to help clients to uncover feelings, memories, judgements 
                     (self and by others) that are somehow preventing a more fulfilled, self-accepting life.
                 </p>
             
-                <p>
+                <p class="text-left">
                     To anyone new to counselling this may sound a daunting prospect and the fear and anxiety of engaging with an ‘expert’ 
                     may seem overwhelming. Having sat in both chairs, so to speak, I understand the possible fears of being 'overpowered' 
                     as well as the dread of being judged. An effective and self-aware counsellor will work hard to ensure that she or he 
@@ -115,7 +124,7 @@
             </div>
         </div>
     </section>
-
+    <!-- Pebbles stacked up image -->
     <section class="bg-white" id="supervision-mobile">
         <div class="max-w-screen-xl mx-auto px-4 md:px-0 flex flex-col justify-center w-full md:w-5/6 lg:w-3/4 xl:w-2/3">
             <div class="flex justify-center">
@@ -123,12 +132,12 @@
             </div>
         </div>
     </section>
-
+    <!-- Supervision, staff care with BACP and Certified Counsellor logos -->
     <section class="bg-white" id="supervision">
         <div class="max-w-screen-xl mx-auto p-8 text-center flex flex-col lg:flex-row items-center">
             <div class="pb-8 lg:pb-0 space-y-8 w-full text-center">
                 <div class="md:text-center">
-                    <div class="text-lg md:text-2xl font-bold my-2 text-center">Supervision and Staff Care</div>
+                    <div class="text-lg md:text-2xl font-bold mt-2 text-center pb-8">Supervision and Staff Care</div>
                     <p class="lg:text-left">
                         Holding a Diploma in Clinical Supervision, I practice supervision and staff care within the professions of counselling 
                         and the education sector. My experience and expertise, coupled with my chosen approach (Proctor’s Model of Clinical​ 
@@ -163,12 +172,12 @@
                 </div>
             </div>
             <div class="lg:w-1/2 flex flex-col sm:flex-row lg:flex-col items-center sm:space-x-24 space-y-8 sm:space-y-0 lg:space-y-24 lg:space-x-0 lg:pl-20">
-                <img class="w-56 sm:w-60 h-24 sm:h-28" src="{{ ('static/images/bacp.png') }}" alt="Empathy, Congruence and Unconditional positive regard"> 
-                <img class="w-44 sm:w-48 h-44 sm:h-48" src="{{ ('static/images/certified-counsellor.png') }}" alt="Empathy, Congruence and Unconditional positive regard"> 
+                <img class="w-56 sm:w-60 h-24 sm:h-28" src="{{ ('static/images/bacp.png') }}" alt="BACP logo"> 
+                <img class="w-44 sm:w-48 h-44 sm:h-48" src="{{ ('static/images/certified-counsellor.png') }}" alt="Certified Counsellor logo"> 
             </div>
         </div>
     </section>
-
+    <!-- Contact form -->
     <section class="bg-red-500">
         Contact
     </section>

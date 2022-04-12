@@ -112,13 +112,13 @@
             x-show="! open" @click.outside="open = true">
                 <ul class="flex flex-col text-purple-700 space-y-4"> 
                     <li class="hover:opacity-50"><a aria-label="Home" href="{{ url_for('index') }}">Home</a></li>
-                    <div class="border border-b border-gray-300 mx-24"></div>
+                    <div class="md:hidden border border-b border-gray-300 mx-24 sm:mx-60"></div>
                     <li class="hover:opacity-50"><a aria-label="What is counselling" href="#counselling-mobile">What is Counselling</a></li>
-                    <div class="border border-b border-gray-300 mx-24"></div>
+                    <div class="md:hidden border border-b border-gray-300 mx-24 sm:mx-60"></div>
                     <li class="hover:opacity-50"><a aria-label="Supervision and staff care" href="#supervision-mobile">Supervision and Staff Care</a></li>
-                    <div class="border border-b border-gray-300 mx-24"></div>
+                    <div class="md:hidden border border-b border-gray-300 mx-24 sm:mx-60"></div>
                     <li class="hover:opacity-50"><a aria-label="Contact and fees" href="">Contact and Fees</a></li>
-                    <div class="border border-b border-gray-300 mx-24"></div>
+                    <div class="md:hidden border border-b border-gray-300 mx-24 sm:mx-60"></div>
                     <li class="hover:opacity-50"><a aria-label="Procecting you" href="{{ url_for('protecting_you') }}">Protecting You</a></li>
                 </ul>
             </div>
