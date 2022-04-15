@@ -2,7 +2,7 @@
 {% block content %}
 
     <!-- Hero Image, welcome message and mission statement -->
-    <section class="bg-white">
+    <section id="home" class="bg-white">
         <div id="hero-image">
             <div class="max-w-screen-xl mx-auto px-8 text-center py-24 sm:py-36 md:py-48 lg:py-60 xl:py-80 2xl:py-96 space-y-4 flex flex-col justify-center"> 
             <!-- <div class="max-w-screen-xl mx-auto px-8 text-center h-96 lg:h-screen space-y-1 flex flex-col justify-center">  -->
@@ -85,7 +85,7 @@
                 </div>
                 <div class="text-lg md:text-2xl font-bold my-4 text-center">Keeping You Safe</div>
                 <div class="md:max-h-40 lg:max-h-20 space-y-2 text-center">
-                    <p class="">I am a registered member (103666) of BA​​CP and adhere to its Ethical Framework​</p>
+                    <p class="">I am a registered member (103666) of <a href="" class="text-indigo-600 hover:text-indigo-800">BA​​CP</a> and adhere to its Ethical Framework​</p>
                     <p class="">I receive regular clinical supervision</p>
                     <p class="">I hold appropriate public liability insurance</p>
                     <p class="">I am committed to regular Continuing Professional Development</p>
@@ -186,7 +186,7 @@
     </section>
 
     <!-- Contact form -->
-    <section class="bg-gradient-to-b from-lime-700 to-stone-400 via-lime-200">
+    <section class="bg-gradient-to-b from-lime-700 to-stone-400 via-lime-200" id="contact-form">
         <form class="">
             <div class="max-w-screen-xl mx-auto p-8 space-y-8 lg:space-y-0 flex flex-col lg:flex-row">
                 <div class="space-y-4 flex flex-col items-center lg:w-1/2">
@@ -194,7 +194,7 @@
                         Contact Me
                     </p>
                     <div class="">
-                        <input id="name" name="name" type="text" minlength="1" maxlength="100" pattern="^[a-zA-Z]{1,100}$" class="validate w-80 pl-1 rounded" placeholder="Name" required>
+                        <input id="name" name="name" type="text" minlength="1" maxlength="100" class="validate w-80 pl-1 rounded" placeholder="Name">
                     </div>
                     <div class="">
                         <input id="email" name="email" type="email" minlength="1" maxlength="100" class="validate w-80 pl-1 rounded" placeholder="Email Address " required>
