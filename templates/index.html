@@ -4,20 +4,27 @@
     <!-- Hero Image, welcome message and mission statement -->
     <section class="bg-white">
         <div id="hero-image">
-            <div class="max-w-screen-xl mx-auto px-8 text-center py-24 sm:py-36 md:py-48 lg:py-60 xl:py-80 2xl:py-96 space-y-1 flex flex-col justify-center"> 
+            <div class="max-w-screen-xl mx-auto px-8 text-center py-24 sm:py-36 md:py-48 lg:py-60 xl:py-80 2xl:py-96 space-y-4 flex flex-col justify-center"> 
             <!-- <div class="max-w-screen-xl mx-auto px-8 text-center h-96 lg:h-screen space-y-1 flex flex-col justify-center">  -->
-                <h1 class="text-lg md:text-2xl font-bold">
-                    Welcome to Brian Walsh Counselling
-                </h1>
-                <h2 class="text-sm md:text-base pb-4">
-                    Brian Walsh Dip. Couns. Reg.MBACP
-                </h2>
+                <div>
+                    <h1 class="text-lg md:text-2xl font-bold">
+                        Welcome to Brian Walsh Counselling
+                    </h1>
+                    <h2 class="text-sm md:text-base">
+                        Brian Walsh Dip. Couns. Reg.MBACP
+                    </h2>
+                </div>
+                
+                <div  class="flex flex-col items-center">
+                    <div id="head-image" class="h-24 md:h-36 lg:h-48 w-24 md:w-36 lg:w-48 border border-white rounded-full bg-white text-center"></div>
+                </div>
                 <h1 class="text-lg md:text-2xl font-bold">
                     The Mission:
                 </h1>
                 <h2 class="text-sm md:text-base italic">
                     “To meet empathically in the ‘here and now’, make sense of the past and choose an authentic future”
                 </h2>
+                
             </div>
         </div>
     </section>
@@ -25,8 +32,8 @@
     <section class="bg-white">
         <div class="max-w-screen-xl mx-auto p-8 text-center space-y-8">
             <h1 class="text-lg md:text-2xl font-bold">
-                    About Brian
-                </h1>
+                About Brian
+            </h1>
             <p>
                 I am qualified at diploma level in Integrative counselling. This means that we will draw upon techniques 
                 from a variety of models and approaches as we explore issues that you, the client, may bring to therapy.
@@ -179,63 +186,69 @@
     </section>
 
     <!-- Contact form -->
-    <section class="">
+    <section class="bg-gradient-to-b from-lime-700 to-stone-400 via-lime-200">
         <form class="">
-            <div class="space-y-4">
-                <p>
-                    Contact Me
-                </p>
-                <div class="">
-                    <input id="name" name="name" type="text" minlength="1" maxlength="100" pattern="^[a-zA-Z]{1,100}$" class="validate" placeholder="Name" required>
-                </div>
-                <div class="">
-                    <input id="email" name="email" type="email" minlength="1" maxlength="100" class="validate" placeholder="Email Address" required>
-                </div>
-                <div class="">
-                    <input id="number" name="number" type="number" minlength="1" maxlength="11" pattern="^[a-zA-Z]{1,100}$" class="validate" placeholder="Contact Number" required>
-                </div>
-                <div class="">
-                    <input id="age" name="age" type="number" minlength="1" maxlength="3" pattern="^[a-zA-Z]{1,100}$" class="validate" placeholder="Age" required>
-                </div>
-                <div class="">
-                    <input id="message" name="message" type="text" minlength="10" maxlength="500"class="validate materialize-textarea" placeholder="Other Information" required>
-                </div>
-                <div class="">
-                    <button type="submit" class="modal-trigger bg-indigo-600 hover:bg-indigo-800 text-white py-1 px-4 rounded">Submit</button>
-                </div>
-                    <p>
-                        Telephone: 07973 953528
+            <div class="max-w-screen-xl mx-auto p-8 space-y-8 lg:space-y-0 flex flex-col lg:flex-row">
+                <div class="space-y-4 flex flex-col items-center lg:w-1/2">
+                    <p class="text-lg md:text-2xl font-bold">
+                        Contact Me
                     </p>
-            </div>
-            <div class="space-y-4">
-                <p>
-                    My Fees
-                </p>
-                <p>
-                    Counselling one to one from £45.00 per session
-                </p>
-                <p>
-                    Supervision/Staff Care from £45.00 per session
-                </p>
-                <p>
-                    Group counselling from £65.00 per session
-                </p>
-                <div class="border border-black border-b w-1/4"></div>
-                <p>
-                    All session are 50 minutes long with 10 minutes for my own reflection and note taking. 
-                </p>
-                <p>
-                    I have reduced rates for students and people on reduced incomes/benefits. Please contact me for more information
-                </p>
-                <p>
-                    I do not ask for proof as, from the outset, our relationship is built on trust
-                </p>
+                    <div class="">
+                        <input id="name" name="name" type="text" minlength="1" maxlength="100" pattern="^[a-zA-Z]{1,100}$" class="validate w-80 pl-1 rounded" placeholder="Name" required>
+                    </div>
+                    <div class="">
+                        <input id="email" name="email" type="email" minlength="1" maxlength="100" class="validate w-80 pl-1 rounded" placeholder="Email Address " required>
+                    </div>
+                    <div class="">
+                        <input id="number" name="number" type="number" minlength="1" maxlength="11" pattern="^[a-zA-Z]{1,100}$" class="validate w-80 pl-1 rounded" placeholder="Contact Number" required>
+                    </div>
+                    <div class="">
+                        <input id="age" name="age" type="number" minlength="1" maxlength="3" pattern="^[a-zA-Z]{1,100}$" class="validate w-80 pl-1 rounded" placeholder="Age" required>
+                    </div>
+                    <div class="">
+                        <textarea id="message" name="message" type="text" minlength="10" maxlength="200" class="validate w-80 h-24 pl-1 rounded" placeholder="Other Information" required ></textarea>
+                    </div>
+                    <div class="">
+                        <button type="submit" class="modal-trigger bg-indigo-600 hover:bg-indigo-800 text-white py-1 px-4 rounded">Submit</button>
+                    </div>
+                        <p>
+                            Telephone: 07973 953528
+                        </p>
+                </div>
+                <div class="space-y-4 text-center lg:w-1/2">
+                    <p class="text-lg md:text-2xl font-bold">
+                        My Fees
+                    </p>
+                    <p>
+                        Counselling one to one from £45.00 per session
+                    </p>
+                    <p>
+                        Supervision/Staff Care from £45.00 per session
+                    </p>
+                    <p>
+                        Group counselling from £65.00 per session
+                    </p>
+                    <div class="flex flex-col items-center">
+                        <div class="border border-black border-b w-2/3"></div>
+                    </div>
+                    <div class="space-y-4 flex flex-col items-center">
+                        <p class="">
+                            All sessions are 50 minutes long with 10 minutes for my own reflection and note taking. 
+                        </p>
+                        <p class="">
+                            I have reduced rates for students and people on reduced incomes/benefits. Please contact me for more information
+                        </p>
+                        <p class="">
+                            I do not ask for proof as, from the outset, our relationship is built on trust
+                        </p>
+                    </div>
+                </div>
             </div>
         </form>
     </section>
 
-    <section>
+    <!-- <section>
         <div class="bg-purple-700 h-1"></div>
-    </section>
+    </section> -->
 
 {% endblock %}

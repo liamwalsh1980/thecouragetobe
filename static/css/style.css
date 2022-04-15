@@ -28,3 +28,10 @@ Text sizes
     background-size: cover; 
     padding: 0;
 }
+
+#head-image {
+    background: url("../images/demo-head-image.jpeg") no-repeat center center;  
+    background-size: cover;
+    background-position-x: 50%;
+    background-position-y: 50%;
+}
