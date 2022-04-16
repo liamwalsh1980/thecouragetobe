@@ -85,7 +85,8 @@
                 </div>
                 <div class="text-lg md:text-2xl font-bold my-4 text-center">Keeping You Safe</div>
                 <div class="md:max-h-40 lg:max-h-20 space-y-2 text-center">
-                    <p class="">I am a registered member (103666) of <a href="" class="text-indigo-600 hover:text-indigo-800">BA​​CP</a> and adhere to its Ethical Framework​</p>
+                    <p class="">I am a registered member (103666) of <a href="https://www.bacp.co.uk/" target="_blank" class="text-indigo-600 hover:text-indigo-800">BA​​CP</a> and adhere to its 
+                        <a href="https://www.bacp.co.uk/events-and-resources/ethics-and-standards/ethical-framework-for-the-counselling-professions/" target="_blank" class="text-indigo-600 hover:text-indigo-800">Ethical Framework</a>​</p>
                     <p class="">I receive regular clinical supervision</p>
                     <p class="">I hold appropriate public liability insurance</p>
                     <p class="">I am committed to regular Continuing Professional Development</p>
@@ -147,10 +148,11 @@
                     <div class="text-lg md:text-2xl font-bold mt-2 text-center pb-8">Supervision and Staff Care</div>
                     <p class="lg:text-left">
                         Holding a Diploma in Clinical Supervision, I practice supervision and staff care within the professions of counselling 
-                        and the education sector. My experience and expertise, coupled with my chosen approach (Proctor’s Model of Clinical​ 
-                        Supervision) enables my work to be fully transferable to other professions and disciplines. The ‘Restorative’ facet of 
-                        the model is particularly effective in allowing an individual to feel empowered and valued - often all that is needed 
-                        for emotional efficacy and enhanced motivation.
+                        and the education sector. My experience and expertise, coupled with my chosen approach (<a aria-label="Proctors Model" 
+                        href="{{ url_for('proctors_model') }}" target="_blank" class="text-indigo-600 hover:text-indigo-800">Proctor’s Model 
+                        of Clinical Supervision​</a>) enables my work to be fully transferable to other professions and disciplines. The ‘Restorative’ 
+                        facet of the model is particularly effective in allowing an individual to feel empowered and valued - often all that is 
+                        needed for emotional efficacy and enhanced motivation.
                     </p>
                 </div>
                 <div class="lg:text-left">
@@ -170,7 +172,7 @@
                         “Clinical supervision has been associated with higher levels of job satisfaction, improved retention, reduced turnover 
                         and staff effectiveness. Effective clinical supervision may increase employees’ perceptions of organisational support 
                         and improve their commitment to an organisation’s vision and goals. It is one way for a provider to fulfil their duty 
-                        of care to staff.”<br>
+                        of care to staff.”
                     </p> 
                     <div class="text-xs font-bold non-italic pt-2">
                         <p>Care Quality Commission</p>
@@ -179,26 +181,18 @@
                 </div>
             </div>
             <div class="lg:w-1/2 flex flex-col sm:flex-row lg:flex-col items-center sm:space-x-24 space-y-8 sm:space-y-0 lg:space-y-24 lg:space-x-0 lg:pl-20">
-                <img class="w-56 sm:w-60 h-24 sm:h-28" src="{{ ('static/images/bacp.png') }}" alt="BACP logo"> 
+                <a href="https://www.bacp.co.uk/" target="_blank" class="text-indigo-600 hover:text-indigo-800">
+                    <img class="w-56 sm:w-60 h-24 sm:h-28" src="{{ ('static/images/bacp.png') }}" alt="BACP logo"> 
+                </a>​
                 <img class="w-44 sm:w-48 h-44 sm:h-48" src="{{ ('static/images/certified-counsellor.png') }}" alt="Certified Counsellor logo"> 
             </div>
         </div>
     </section>
-     <!-- Back to top -->
-     <div class="relative flex justify-center items-center">
-        <div
-            class="absolute mx-2 right-0 flex items-center justify-center h-10 sm:h-12 w-10 sm:w-12
-            bg-purple-700 rounded-full z-20 drop-shadow-lg">
-            <a href="#home" aria-label="Slide Up" @click="swiper.slideUp()" class="z-20">
-                <i class="fa-solid fa-chevron-up text-base sm:text-xl text-white"></i>
-            </a>
-        </div>
-    </div>
     <!-- Contact form -->
-    <section class="bg-gradient-to-b from-lime-700 to-stone-400 via-lime-200" id="contact-form">
+    <section class="bg-gradient-to-b from-lime-700 to-stone-500 via-lime-200" id="contact-form">
         <form class="">
-            <div class="max-w-screen-xl mx-auto p-8 space-y-8 lg:space-y-0 flex flex-col lg:flex-row">
-                <div class="space-y-4 flex flex-col items-center lg:w-1/2">
+            <div class="max-w-screen-xl mx-auto p-8 space-y-8 md:space-y-0 flex flex-col md:flex-row">
+                <div class="space-y-4 flex flex-col items-center md:w-1/2">
                     <p class="text-lg md:text-2xl font-bold">
                         Contact Me
                     </p>
@@ -224,7 +218,7 @@
                             Telephone: 07973 953528
                         </p>
                 </div>
-                <div class="space-y-4 text-center lg:w-1/2">
+                <div class="space-y-4 text-center md:w-1/2">
                     <p class="text-lg md:text-2xl font-bold">
                         My Fees
                     </p>
@@ -255,9 +249,15 @@
             </div>
         </form>
     </section>
-
-    <!-- <section>
-        <div class="bg-purple-700 h-1"></div>
-    </section> -->
+    <!-- Back to top -->
+    <div class="relative flex justify-center items-center md:hidden">
+        <div
+            class="absolute mx-2 right-0 flex items-center justify-center h-10 sm:h-12 w-10 sm:w-12
+            bg-purple-700 rounded-full z-20 drop-shadow-lg">
+            <a href="#home" aria-label="Slide Up" @click="swiper.slideUp()" class="z-20">
+                <i class="fa-solid fa-chevron-up text-base sm:text-xl text-white"></i>
+            </a>
+        </div>
+    </div>
 
 {% endblock %}
