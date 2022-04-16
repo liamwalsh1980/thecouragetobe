@@ -184,7 +184,16 @@
             </div>
         </div>
     </section>
-
+     <!-- Back to top -->
+     <div class="relative flex justify-center items-center">
+        <div
+            class="absolute mx-2 right-0 flex items-center justify-center h-10 sm:h-12 w-10 sm:w-12
+            bg-purple-700 rounded-full z-20 drop-shadow-lg">
+            <a href="#home" aria-label="Slide Up" @click="swiper.slideUp()" class="z-20">
+                <i class="fa-solid fa-chevron-up text-base sm:text-xl text-white"></i>
+            </a>
+        </div>
+    </div>
     <!-- Contact form -->
     <section class="bg-gradient-to-b from-lime-700 to-stone-400 via-lime-200" id="contact-form">
         <form class="">
