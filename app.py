@@ -21,13 +21,6 @@ mongo = PyMongo(app)
 # An instance of PyMongo using a Constructor method to add 'app' from above
 
 
-# @app.route("/")
-# @app.route("/get_blogs")
-# def get_blogs():
-#     blogs = mongo.db.blogs.find()
-#     return render_template("blogs.html", blogs=blogs)
-
-
 @app.route("/")
 @app.route("/index")
 def index():
@@ -44,10 +37,10 @@ def protecting_you():
     return render_template("protecting_you.html")
 
 
-@app.route("/blog")
-def blog():
-    blog = mongo.db.blog.find()
-    return render_template("blog.html", blog=blog)
+@app.route("/thecouragetobe_blog")
+def thecouragetobe_blog():
+    blogs = mongo.db.blogs.find()
+    return render_template("blog.html", blogs=blogs)
 
 
 if __name__ == "__main__":
