@@ -30,8 +30,8 @@ Text sizes
 }
 
 #head-image {
-    background: url("../images/demo-head-image.jpeg") no-repeat center center;  
+    background: url("../images/head-image-white-bg.png") no-repeat center center;  
     background-size: cover;
     background-position-x: 50%;
-    background-position-y: 50%;
+    background-position-y: 10%;
 }

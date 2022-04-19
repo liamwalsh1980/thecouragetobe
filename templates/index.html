@@ -4,9 +4,9 @@
     <!-- Hero Image, welcome message and mission statement -->
     <section id="home" class="bg-white">
         <div id="hero-image">
-            <div class="max-w-screen-xl mx-auto px-8 text-center py-24 sm:py-36 md:py-48 lg:py-60 xl:py-80 2xl:py-96 space-y-4 flex flex-col justify-center"> 
+            <div class="max-w-screen-xl mx-auto px-8 text-center py-24 sm:py-36 md:py-48 lg:py-60 xl:py-80 2xl:py-96 flex flex-col justify-center"> 
             <!-- <div class="max-w-screen-xl mx-auto px-8 text-center h-96 lg:h-screen space-y-1 flex flex-col justify-center">  -->
-                <div>
+                <div class="pb-8">
                     <h1 class="text-lg md:text-2xl font-bold">
                         Welcome to Brian Walsh Counselling
                     </h1>
@@ -15,16 +15,18 @@
                     </h2>
                 </div>
                 
-                <div  class="flex flex-col items-center">
-                    <div id="head-image" class="h-24 md:h-36 lg:h-48 w-24 md:w-36 lg:w-48 border border-white rounded-full bg-white text-center"></div>
+                <div class="flex flex-col items-center ">
+                    <div id="head-image" class="h-28 lg:h-56 w-24 lg:w-48 border-2 border-white opacity-90 rounded"></div>
                 </div>
-                <h1 class="text-lg md:text-2xl font-bold">
-                    The Mission:
-                </h1>
-                <h2 class="text-sm md:text-base italic">
-                    “To meet empathically in the ‘here and now’, make sense of the past and choose an authentic future”
-                </h2>
-                
+
+                <div class="pt-8">
+                    <h1 class="text-lg md:text-2xl font-bold">
+                        The Mission:
+                    </h1>
+                    <h2 class="text-sm md:text-base italic">
+                        “To meet empathically in the ‘here and now’, make sense of the past and choose an authentic future”
+                    </h2>
+                </div>
             </div>
         </div>
     </section>
@@ -85,8 +87,8 @@
                 </div>
                 <div class="text-lg md:text-2xl font-bold my-4 text-center">Keeping You Safe</div>
                 <div class="md:max-h-40 lg:max-h-20 space-y-2 text-center">
-                    <p class="">I am a registered member (103666) of <a href="https://www.bacp.co.uk/" target="_blank" class="text-indigo-600 hover:text-indigo-800">BA​​CP</a> and adhere to its 
-                        <a href="https://www.bacp.co.uk/events-and-resources/ethics-and-standards/ethical-framework-for-the-counselling-professions/" target="_blank" class="text-indigo-600 hover:text-indigo-800">Ethical Framework</a>​</p>
+                    <p class="">I am a registered member (103666) of <a href="https://www.bacp.co.uk/" target="_blank" class="text-purple-700 hover:text-rose-600">BA​​CP</a> and adhere to its 
+                        <a href="https://www.bacp.co.uk/events-and-resources/ethics-and-standards/ethical-framework-for-the-counselling-professions/" target="_blank" class="text-purple-700 hover:text-rose-600">Ethical Framework</a>​</p>
                     <p class="">I receive regular clinical supervision</p>
                     <p class="">I hold appropriate public liability insurance</p>
                     <p class="">I am committed to regular Continuing Professional Development</p>
@@ -119,7 +121,7 @@
                     (self and by others) that are somehow preventing a more fulfilled, self-accepting life.
                 </p>
             
-                <p class="text-left">
+                <p class="lg:text-left">
                     To anyone new to counselling this may sound a daunting prospect and the fear and anxiety of engaging with an ‘expert’ 
                     may seem overwhelming. Having sat in both chairs, so to speak, I understand the possible fears of being 'overpowered' 
                     as well as the dread of being judged. An effective and self-aware counsellor will work hard to ensure that she or he 
@@ -149,7 +151,7 @@
                     <p class="lg:text-left">
                         Holding a Diploma in Clinical Supervision, I practice supervision and staff care within the professions of counselling 
                         and the education sector. My experience and expertise, coupled with my chosen approach (<a aria-label="Proctors Model" 
-                        href="{{ url_for('proctors_model') }}" target="_blank" class="text-indigo-600 hover:text-indigo-800">Proctor’s Model 
+                        href="{{ url_for('proctors_model') }}" target="_blank" class="text-purple-700 hover:text-rose-600">Proctor’s Model 
                         of Clinical Supervision​</a>) enables my work to be fully transferable to other professions and disciplines. The ‘Restorative’ 
                         facet of the model is particularly effective in allowing an individual to feel empowered and valued - often all that is 
                         needed for emotional efficacy and enhanced motivation.
@@ -182,9 +184,9 @@
             </div>
             <div class="lg:w-1/2 flex flex-col sm:flex-row lg:flex-col items-center sm:space-x-24 space-y-8 sm:space-y-0 lg:space-y-24 lg:space-x-0 lg:pl-20">
                 <a href="https://www.bacp.co.uk/" target="_blank" class="text-indigo-600 hover:text-indigo-800">
-                    <img class="w-56 sm:w-60 h-24 sm:h-28" src="{{ ('static/images/bacp.png') }}" alt="BACP logo"> 
+                    <img class="w-60 h-28" src="{{ ('static/images/bacp.png') }}" alt="BACP logo"> 
                 </a>​
-                <img class="w-44 sm:w-48 h-44 sm:h-48" src="{{ ('static/images/certified-counsellor.png') }}" alt="Certified Counsellor logo"> 
+                <img class="w-56 h-52" src="{{ ('static/images/certified-counsellor.png') }}" alt="Certified Counsellor logo"> 
             </div>
         </div>
     </section>
@@ -212,7 +214,8 @@
                         <textarea id="message" name="message" type="text" minlength="10" maxlength="200" class="validate w-80 h-24 pl-1 rounded" placeholder="Other Information" required ></textarea>
                     </div>
                     <div class="">
-                        <button type="submit" class="modal-trigger bg-indigo-600 hover:bg-indigo-800 text-white py-1 px-4 rounded">Submit</button>
+                        <button type="submit" class="modal-trigger bg-purple-700 hover:bg-rose-600 active:bg-rose-700 focus:outline-none focus:ring focus:ring-rose-300
+                        text-white py-1 px-4 rounded-full">Take the step</button>
                     </div>
                         <p>
                             Telephone: 07973 953528

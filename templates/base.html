@@ -44,26 +44,26 @@
           font-family: "Hind", sans-serif;
         }
     </style>
-    <header class="bg-white sticky top-0 border-b border-purple-900">
+    <header class="bg-white sticky top-0 border-b border-rose-900 z-10">
         <!-- Main Navbar -->
         <div class="px-8 py-4 flex items-center justify-between hidden lg:flex">
             <div>
-                <h1 class="text-2xl font-bold text-purple-900">thecouragetobe.org</h1>
-                <h2 class="text-purple-700">Brian Walsh Counselling</h2>
+                <a aria-label="Home" href="{{ url_for('index') }}"><h1 class="text-2xl font-bold text-purple-700 hover:text-rose-600">thecouragetobe.org</h1></a>
+                <h2 class="font-medium text-purple-500">Brian Walsh Counselling</h2>
             </div>
             <nav>
-                <ul class="flex space-x-2 lg:space-x-8 text-purple-700 text-sm lg:text-xs xl:text-sm"> 
-                    <li class="hover:opacity-50"><a aria-label="Home" href="{{ url_for('index') }}">Home</a></li>
-                    <div class="border border-l border-black"></div>
-                    <li class="hover:opacity-50"><a aria-label="What is counselling" href="https://thecouragetobe.herokuapp.com/index#counselling">What is Counselling</a></li>
-                    <div class="border border-l border-black"></div>
-                    <li class="hover:opacity-50"><a aria-label="Supervision and staff care" href="https://thecouragetobe.herokuapp.com/index#supervision">Supervision and Staff Care</a></li>
-                    <div class="border border-l border-black"></div>
-                    <li class="hover:opacity-50"><a aria-label="Contact and fees" href="https://thecouragetobe.herokuapp.com/index#contact-form">Contact and Fees</a></li>
-                    <div class="border border-l border-black"></div>
-                    <li class="hover:opacity-50"><a aria-label="Protecting you" href="{{ url_for('protecting_you') }}">Protecting You</a></li>
-                    <div class="border border-l border-black"></div>
-                    <li class="hover:opacity-50"><a aria-label="Blog" href="{{ url_for('thecouragetobe_blog') }}">Blog</a></li>
+                <ul class="flex space-x-2 lg:space-x-6 xl:space-x-8 text-purple-700 font-medium text-sm lg:text-xs xl:text-sm"> 
+                    <li class="hover:text-rose-600"><a aria-label="Home" href="{{ url_for('index') }}">Home</a></li>
+                    <div class="border border-l border-rose-200"></div>
+                    <li class="hover:text-rose-600"><a aria-label="What is counselling" href="https://thecouragetobe.herokuapp.com/index#counselling">What is Counselling</a></li>
+                    <div class="border border-l border-rose-200"></div>
+                    <li class="hover:text-rose-600"><a aria-label="Supervision and staff care" href="https://thecouragetobe.herokuapp.com/index#supervision">Supervision and Staff Care</a></li>
+                    <div class="border border-l border-rose-200"></div>
+                    <li class="hover:text-rose-600"><a aria-label="Contact and fees" href="https://thecouragetobe.herokuapp.com/index#contact-form">Contact and Fees</a></li>
+                    <div class="border border-l border-rose-200"></div>
+                    <li class="hover:text-rose-600"><a aria-label="Protecting you" href="{{ url_for('protecting_you') }}">Protecting You</a></li>
+                    <div class="border border-l border-rose-200"></div>
+                    <li class="hover:text-rose-600"><a aria-label="Blog" href="{{ url_for('thecouragetobe_blog') }}">Blog</a></li>
                 </ul>
             </nav>
         </div>
@@ -71,8 +71,8 @@
         <div x-data="{ open: true }">
             <div class="py-2 flex justify-between px-4 lg:hidden">
                 <div>
-                    <h1 class="text-2xl font-bold text-purple-900">thecouragetobe.org</h1>
-                    <h2 class="text-purple-700">Brian Walsh Counselling</h2>
+                    <a aria-label="Home" href="{{ url_for('index') }}"><h1 class="text-2xl font-bold text-purple-700 hover:text-rose-600">thecouragetobe.org</h1></a>
+                    <h2 class="font-medium text-purple-500">Brian Walsh Counselling</h2>
                 </div>
                 <nav id="top" class="lg:hidden mt-2">
                     <button 
@@ -113,27 +113,27 @@
             <div class="bg-white w-full text-center py-8" 
             x-show="! open" @click.outside="open = true">
                 <ul class="flex flex-col text-purple-700 space-y-4"> 
-                    <li class="hover:opacity-50"><a aria-label="Home" href="{{ url_for('index') }}">Home</a></li>
+                    <li class="hover:text-rose-600"><a aria-label="Home" href="{{ url_for('index') }}">Home</a></li>
                     <div class="flex flex-col items-center">
-                        <div class="border border-gray-300 border-b w-1/2 sm:w-1/4"></div>
+                        <div class="border border-rose-200 border-b w-1/2 sm:w-1/4"></div>
                     </div>
-                    <li class="hover:opacity-50"><a aria-label="What is counselling" href="https://thecouragetobe.herokuapp.com/index#counselling-mobile">What is Counselling</a></li>
+                    <li class="hover:text-rose-600"><a aria-label="What is counselling" href="https://thecouragetobe.herokuapp.com/index#counselling-mobile">What is Counselling</a></li>
                     <div class="flex flex-col items-center">
-                        <div class="border border-gray-300 border-b w-1/2 sm:w-1/4"></div>
+                        <div class="border border-rose-200 border-b w-1/2 sm:w-1/4"></div>
                     </div>
-                    <li class="hover:opacity-50"><a aria-label="Supervision and staff care" href="https://thecouragetobe.herokuapp.com/index#supervision-mobile">Supervision and Staff Care</a></li>
+                    <li class="hover:text-rose-600"><a aria-label="Supervision and staff care" href="https://thecouragetobe.herokuapp.com/index#supervision-mobile">Supervision and Staff Care</a></li>
                      <div class="flex flex-col items-center">
-                        <div class="border border-gray-300 border-b w-1/2 sm:w-1/4"></div>
+                        <div class="border border-rose-200 border-b w-1/2 sm:w-1/4"></div>
                     </div>
-                    <li class="hover:opacity-50"><a aria-label="Contact and fees" href="https://thecouragetobe.herokuapp.com/index#contact-form">Contact and Fees</a></li>
+                    <li class="hover:text-rose-600"><a aria-label="Contact and fees" href="https://thecouragetobe.herokuapp.com/index#contact-form">Contact and Fees</a></li>
                     <div class="flex flex-col items-center">
-                        <div class="border border-gray-300 border-b w-1/2 sm:w-1/4"></div>
+                        <div class="border border-rose-200 border-b w-1/2 sm:w-1/4"></div>
                     </div>
-                    <li class="hover:opacity-50"><a aria-label="Procecting you" href="{{ url_for('protecting_you') }}">Protecting You</a></li>
+                    <li class="hover:text-rose-600"><a aria-label="Procecting you" href="{{ url_for('protecting_you') }}">Protecting You</a></li>
                     <div class="flex flex-col items-center">
-                        <div class="border border-gray-300 border-b w-1/2 sm:w-1/4"></div>
+                        <div class="border border-rose-200 border-b w-1/2 sm:w-1/4"></div>
                     </div>
-                    <li class="hover:opacity-50"><a aria-label="Blog" href="{{ url_for('thecouragetobe_blog') }}">Blog</a></li>
+                    <li class="hover:text-rose-600"><a aria-label="Blog" href="{{ url_for('thecouragetobe_blog') }}">Blog</a></li>
                 </ul>
             </div>
         </div>
@@ -147,20 +147,21 @@
     <footer class="">
         <div class="px-8 py-4 flex items-center justify-center lg:justify-between">
             <div class="hidden lg:block">
-                <a href="https://www.bacp.co.uk/" target="_blank" class="text-indigo-600 hover:text-indigo-800">
-                    <img class="w-28 sm:w-32 h-12 sm:h-14" src="{{ ('static/images/bacp.png') }}" alt="Empathy, Congruence and Unconditional positive regard"> 
+                <a href="https://www.bacp.co.uk/" target="_blank">
+                    <img class="w-28 sm:w-32 h-12 sm:h-14" src="{{ ('static/images/bacp.png') }}" alt="BACP logo"> 
                 </a>
             </div>
             <div>
                 <div class="text-center space-x-4">
-                    <i class="fa-brands fa-facebook-square text-3xl"></i>
-                    <i class="fa-brands fa-whatsapp-square text-3xl"></i>
-                    <i class="fa-solid fa-square-envelope text-3xl"></i>
+                    <a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook-square text-3xl hover:text-purple-700 active:text-purple-900"></i></a>
+                    <a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-whatsapp-square text-3xl hover:text-purple-700 active:text-purple-900"></i></a>
+                    <a href="mailto: brian@thecouragetobe.org" target="_blank"><i class="fa-solid fa-square-envelope text-3xl hover:text-purple-700 active:text-purple-900"></i></a>
+                   
                 </div>
                 <p class="text-purple-900">&copy Brian Walsh Counelling</p>
             </div>
             <div class="hidden lg:block">
-                <img class="w-24 sm:w-32 h-24 sm:h-32" src="{{ ('static/images/certified-counsellor.png') }}" alt="Empathy, Congruence and Unconditional positive regard"> 
+                <img class="w-28 h-24" src="{{ ('static/images/certified-counsellor.png') }}" alt="Certified Counsellor logo"> 
             </div>
         </div>
     </footer>
