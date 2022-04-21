@@ -9,10 +9,10 @@
     <meta name="description" content="">
     <meta name="keywords" content="">
     <meta name="author" content="Liam Walsh">
-    <!-- FontAwesome Icons Script tage from cdnjs.com -->
+    <!-- FontAwesome Icons Script tag from cdnjs.com -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" 
         integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" 
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        crossorigin="anonymous" referrerpolicy="no-referrer" type="text/css"/>
     <!-- Head tab icon using https://gauger.io/fonticon/-->
     <link rel="icon" type="image/ico" href="static/images/favicon-head-icon.ico" />
     <!-- Local script for CSS -->
@@ -25,11 +25,12 @@
         integrity="sha512-wnea99uKIC3TJF7v4eKk4Y+lMz2Mklv18+r4na2Gn1abDRPPOeef95xTzdwGD9e6zXJBteMIhZ1+68QC5byJZw==" 
         crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
     <title>thecouragetobe</title>
+    <!-- Tailwindcss CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/2.3.0/alpine.js" 
         integrity="sha512-nIwdJlD5/vHj23CbO2iHCXtsqzdTTx3e3uAmpTm4x2Y8xCIFyWu4cSIV8GaGe2UNVq86/1h9EgUZy7tn243qdA==" 
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
     <!-- External script with emailjs with unique user ID added -->
     <script>
         (function(){
@@ -165,6 +166,11 @@
         </div>
     </footer>
     
+    <!-- JQuery script from https://code.jquery.com/ to enable JQuery usage -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <!-- Local script for JS -->
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
     <!-- Local JS script for sendEmail.js -->
     <script src="{{ url_for('static', filename='js/sendEmail.js') }}"></script>
     {% block scripts %}
