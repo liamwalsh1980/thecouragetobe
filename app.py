@@ -28,6 +28,11 @@ def index():
     return render_template("index.html", index=index)
 
 
+# @app.route("/contact", methods=["GET", "POST"])
+# def contact():
+#     return render_template("contact.html")
+
+
 @app.route("/proctors_model")
 def proctors_model():
     return render_template("proctors_model.html")
