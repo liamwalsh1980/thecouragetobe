@@ -189,8 +189,8 @@
         </div>
     </section>
     <!-- Contact form -->
-    <!-- <section class="bg-gradient-to-b from-lime-700 to-stone-500 via-lime-200" id="contact-form">
-        <form onsubmit="return sendMail(this);" method="post, get" action="{{ url_for('index') }}">
+    <section class="bg-gradient-to-b from-lime-700 to-stone-500 via-lime-200" id="contact-form">
+        <form>
             <div class="max-w-screen-xl mx-auto p-8 space-y-8 md:space-y-0 flex flex-col md:flex-row">
                 <div class="space-y-4 flex flex-col items-center md:w-1/2">
                     <p class="text-lg md:text-2xl font-bold">
@@ -212,9 +212,12 @@
                         <textarea id="message" name="message" type="text" minlength="10" maxlength="200" class="validate w-80 h-24 pl-1 rounded" placeholder="Other Information" ></textarea>
                     </div>
                     <div class="">
-                        <button type="submit" class="bg-purple-700 hover:bg-rose-600 active:bg-rose-700 focus:outline-none focus:ring focus:ring-rose-300
-                        text-white py-1 px-4 rounded-full"
-                        >Take the step</button>
+                        <button 
+                            type="submit" 
+                            class="bg-purple-700 hover:bg-rose-600 active:bg-rose-700 focus:outline-none focus:ring focus:ring-rose-300
+                            text-white py-1 px-4 rounded-full"
+                            >Take the step
+                        </button>
                     </div>
                     <p>
                         Telephone: 07973 953528
@@ -250,7 +253,7 @@
                 </div>
             </div>
         </form> 
-    </section> -->
+    </section>
     <!-- Back to top -->
     <div class="relative flex justify-center items-center md:hidden">
         <div

@@ -30,17 +30,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/2.3.0/alpine.js" 
         integrity="sha512-nIwdJlD5/vHj23CbO2iHCXtsqzdTTx3e3uAmpTm4x2Y8xCIFyWu4cSIV8GaGe2UNVq86/1h9EgUZy7tn243qdA==" 
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    
-
-    <!-- External script with emailjs with unique user ID added -->
-    <script type="text/javascript"
-        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
-    </script>
-    <script type="text/javascript">
-        (function(){
-            emailjs.init("yB1DmUyNHp8qzGMD-");
-        })();
-    </script>
 </head>
 
 <body class="">
@@ -64,7 +53,7 @@
                     <div class="border border-l border-rose-200"></div>
                     <li class="hover:text-rose-600"><a aria-label="Supervision and staff care" href="">Supervision and Staff Care</a></li>
                     <div class="border border-l border-rose-200"></div>
-                    <li class="hover:text-rose-600"><a aria-label="Contact and fees" href="{{ url_for('contact') }}">Contact and Fees</a></li>
+                    <li class="hover:text-rose-600"><a aria-label="Contact and fees" href="">Contact and Fees</a></li>
                     <div class="border border-l border-rose-200"></div>
                     <li class="hover:text-rose-600"><a aria-label="Protecting you" href="{{ url_for('protecting_you') }}">Protecting You</a></li>
                     <div class="border border-l border-rose-200"></div>
@@ -130,7 +119,7 @@
                      <div class="flex flex-col items-center">
                         <div class="border border-rose-200 border-b w-1/2 sm:w-1/4"></div>
                     </div>
-                    <li class="hover:text-rose-600"><a aria-label="Contact and fees" href="{{ url_for('contact') }}">Contact and Fees</a></li>
+                    <li class="hover:text-rose-600"><a aria-label="Contact and fees" href="">Contact and Fees</a></li>
                     <div class="flex flex-col items-center">
                         <div class="border border-rose-200 border-b w-1/2 sm:w-1/4"></div>
                     </div>
@@ -176,7 +165,7 @@
     <!-- Local script for JS -->
     <script src="{{ url_for('static', filename='js/script.js') }}"></script>
     <!-- Local JS script for sendEmail.js -->
-    <script src="{{ url_for('static', filename='js/sendEmail.js') }}"></script>
+    <!-- <script src="{{ url_for('static', filename='js/sendEmail.js') }}"></script> -->
     {% block scripts %}
     {% endblock %}
 </body>
