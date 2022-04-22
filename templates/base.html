@@ -9,24 +9,35 @@
     <meta name="description" content="">
     <meta name="keywords" content="">
     <meta name="author" content="Liam Walsh">
+    <!-- Bootstrap for Modal -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
     <!-- FontAwesome Icons Script tag from cdnjs.com -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" 
         integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" 
         crossorigin="anonymous" referrerpolicy="no-referrer" type="text/css"/>
-    <!-- Head tab icon using https://gauger.io/fonticon/-->
-    <link rel="icon" type="image/ico" href="static/images/favicon-head-icon.ico" />
     <!-- Google font Hind -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Hind:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <!-- Tailwind CSS and customer CSS scripts -->
+    <!-- Tailwind CSS and custom CSS scripts -->
     <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}" type="text/css" rel="stylesheet">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css" rel="stylesheet">
+    <!-- Head tab icon using https://gauger.io/fonticon/-->
     <link rel="icon" type="image/ico" href="static/images/favicon.png" />
     <title>thecouragetobe</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/2.3.0/alpine.js" 
         integrity="sha512-nIwdJlD5/vHj23CbO2iHCXtsqzdTTx3e3uAmpTm4x2Y8xCIFyWu4cSIV8GaGe2UNVq86/1h9EgUZy7tn243qdA==" 
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- Local JS script for sendEmail.js -->
+    <script src="{{ url_for('static', filename='js/sendEmail.js') }}"></script>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function(){
+            emailjs.init("yB1DmUyNHp8qzGMD-");
+        })();
+    </script>
 </head>
 
 <body class="">
@@ -44,17 +55,17 @@
             </div>
             <nav>
                 <ul class="flex space-x-2 lg:space-x-6 xl:space-x-8 text-purple-700 font-medium text-sm lg:text-xs xl:text-sm"> 
-                    <li class="hover:text-rose-600"><a aria-label="Home" href="{{ url_for('index') }}">Home</a></li>
-                    <div class="border border-l border-rose-200"></div>
-                    <li class="hover:text-rose-600"><a aria-label="What is counselling" href="">What is Counselling</a></li>
-                    <div class="border border-l border-rose-200"></div>
-                    <li class="hover:text-rose-600"><a aria-label="Supervision and staff care" href="">Supervision and Staff Care</a></li>
-                    <div class="border border-l border-rose-200"></div>
-                    <li class="hover:text-rose-600"><a aria-label="Contact and fees" href="">Contact and Fees</a></li>
-                    <div class="border border-l border-rose-200"></div>
-                    <li class="hover:text-rose-600"><a aria-label="Protecting you" href="{{ url_for('protecting_you') }}">Protecting You</a></li>
-                    <div class="border border-l border-rose-200"></div>
-                    <li class="hover:text-rose-600"><a aria-label="Blog" href="{{ url_for('thecouragetobe_blog') }}">Blog</a></li>
+                    <li><a aria-label="Home" class="hover:text-rose-600" href="{{ url_for('index') }}">Home</a></li>
+                    <div class="border-1 border-rose-200"></div>
+                    <li><a aria-label="What is counselling" class="hover:text-rose-600" href="https://thecouragetobe.herokuapp.com/index#counselling">What is Counselling</a></li>
+                    <div class="border-1 border-rose-200"></div>
+                    <li><a aria-label="Supervision and staff care" class="hover:text-rose-600" href="https://thecouragetobe.herokuapp.com/index#supervision">Supervision and Staff Care</a></li>
+                    <div class="border-1 border-rose-200"></div>
+                    <li><a aria-label="Contact and fees" class="hover:text-rose-600" href="https://thecouragetobe.herokuapp.com/index#contact-form">Contact and Fees</a></li>
+                    <div class="border-1 border-rose-200"></div>
+                    <li><a aria-label="Protecting you" class="hover:text-rose-600" href="{{ url_for('protecting_you') }}">Protecting You</a></li>
+                    <div class="border-1 border-rose-200"></div>
+                    <li><a aria-label="Blog" class="hover:text-rose-600" href="{{ url_for('thecouragetobe_blog') }}">Blog</a></li>
                 </ul>
             </nav>
         </div>
@@ -104,27 +115,27 @@
             <div class="bg-white w-full text-center py-8" 
             x-show="! open" @click.outside="open = true">
                 <ul class="flex flex-col text-purple-700 space-y-4"> 
-                    <li class="hover:text-rose-600"><a aria-label="Home" href="{{ url_for('index') }}">Home</a></li>
+                    <li><a aria-label="Home" class="hover:text-rose-600" href="{{ url_for('index') }}">Home</a></li>
                     <div class="flex flex-col items-center">
-                        <div class="border border-rose-200 border-b w-1/2 sm:w-1/4"></div>
+                        <div class="border-1 border-rose-200 border-b w-1/2 sm:w-1/4"></div>
                     </div>
-                    <li class="hover:text-rose-600"><a aria-label="What is counselling" href="">What is Counselling</a></li>
+                    <li><a aria-label="What is counselling" class="hover:text-rose-600" href="https://thecouragetobe.herokuapp.com/index#counselling">What is Counselling</a></li>
                     <div class="flex flex-col items-center">
-                        <div class="border border-rose-200 border-b w-1/2 sm:w-1/4"></div>
+                        <div class="border-1 border-rose-200 border-b w-1/2 sm:w-1/4"></div>
                     </div>
-                    <li class="hover:text-rose-600"><a aria-label="Supervision and staff care" href="">Supervision and Staff Care</a></li>
+                    <li><a aria-label="Supervision and staff care" class="hover:text-rose-600" href="https://thecouragetobe.herokuapp.com/index#supervision">Supervision and Staff Care</a></li>
                      <div class="flex flex-col items-center">
-                        <div class="border border-rose-200 border-b w-1/2 sm:w-1/4"></div>
+                        <div class="border-1 border-rose-200 border-b w-1/2 sm:w-1/4"></div>
                     </div>
-                    <li class="hover:text-rose-600"><a aria-label="Contact and fees" href="">Contact and Fees</a></li>
+                    <li><a aria-label="Contact and fees" class="hover:text-rose-600" href="https://thecouragetobe.herokuapp.com/index#contact-form-mobile">Contact and Fees</a></li>
                     <div class="flex flex-col items-center">
-                        <div class="border border-rose-200 border-b w-1/2 sm:w-1/4"></div>
+                        <div class="border-1 border-rose-200 border-b w-1/2 sm:w-1/4"></div>
                     </div>
-                    <li class="hover:text-rose-600"><a aria-label="Procecting you" href="{{ url_for('protecting_you') }}">Protecting You</a></li>
+                    <li><a aria-label="Procecting you" class="hover:text-rose-600" href="{{ url_for('protecting_you') }}">Protecting You</a></li>
                     <div class="flex flex-col items-center">
-                        <div class="border border-rose-200 border-b w-1/2 sm:w-1/4"></div>
+                        <div class="border-1 border-rose-200 border-b w-1/2 sm:w-1/4"></div>
                     </div>
-                    <li class="hover:text-rose-600"><a aria-label="Blog" href="{{ url_for('thecouragetobe_blog') }}">Blog</a></li>
+                    <li><a aria-label="Blog" class="hover:text-rose-600" href="{{ url_for('thecouragetobe_blog') }}">Blog</a></li>
                 </ul>
             </div>
         </div>
@@ -135,7 +146,7 @@
     </main>
 
     <!-- Footer -->
-    <footer class="">
+    <footer class="2xl:max-w-screen-xl mx-auto">
         <div class="px-8 py-4 flex items-center justify-center lg:justify-between">
             <div class="hidden lg:block">
                 <a href="https://www.bacp.co.uk/" target="_blank">
@@ -146,7 +157,7 @@
                 <div class="text-center space-x-4">
                     <a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook-square text-3xl text-[#3b5998] hover:text-purple-700 active:text-purple-900"></i></a>
                     <a href="mailto: brian@thecouragetobe.org" target="_blank"><i class="fa-solid fa-square-envelope text-3xl text-[#c4302b] hover:text-purple-700 active:text-purple-900"></i></a>
-                    <a href="{{ url_for('thecouragetobe_blog') }}"><i class="fa-solid fa-blog text-3xl hover:text-purple-700 active:text-purple-900"></i></a>
+                    <a href="{{ url_for('thecouragetobe_blog') }}"><i class="fa-solid fa-blog text-3xl text-lime-700 hover:text-purple-700 active:text-purple-900"></i></a>
                 </div>
                 <p class="text-purple-900">&copy Brian Walsh Counelling</p>
             </div>
@@ -155,14 +166,17 @@
             </div>
         </div>
     </footer>
-    
+
     <!-- JQuery script from https://code.jquery.com/ to enable JQuery usage -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <!-- Local script for JS -->
     <script src="{{ url_for('static', filename='js/script.js') }}"></script>
-    <!-- Local JS script for sendEmail.js -->
-    <!-- <script src="{{ url_for('static', filename='js/sendEmail.js') }}"></script> -->
+    <!-- Bootstrap for Modal -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js"
+        integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQObG"
+        crossorigin="anonymous"></script>
+    
     {% block scripts %}
     {% endblock %}
 </body>

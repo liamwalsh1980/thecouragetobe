@@ -180,7 +180,7 @@
                     </div>
                 </div>
             </div>
-            <div class="lg:w-1/2 flex flex-col sm:flex-row lg:flex-col items-center sm:space-x-24 space-y-8 sm:space-y-0 lg:space-y-24 lg:space-x-0 lg:pl-20">
+            <div id="contact-form-mobile" class="lg:w-1/2 flex flex-col sm:flex-row lg:flex-col items-center sm:space-x-24 space-y-8 sm:space-y-0 lg:space-y-24 lg:space-x-0 lg:pl-20">
                 <a href="https://www.bacp.co.uk/" target="_blank" class="text-indigo-600 hover:text-indigo-800">
                     <img class="w-60 h-28" src="{{ ('static/images/bacp.png') }}" alt="BACP logo"> 
                 </a>​
@@ -190,7 +190,7 @@
     </section>
     <!-- Contact form -->
     <section class="bg-gradient-to-b from-lime-700 to-stone-500 via-lime-200" id="contact-form">
-        <form>
+        <form onsubmit="return sendMail(this);" method="post, get">
             <div class="max-w-screen-xl mx-auto p-8 space-y-8 md:space-y-0 flex flex-col md:flex-row">
                 <div class="space-y-4 flex flex-col items-center md:w-1/2">
                     <p class="text-lg md:text-2xl font-bold">
@@ -213,13 +213,13 @@
                     </div>
                     <div class="">
                         <button 
-                            type="submit" 
+                            type="submit" value="submit"
                             class="bg-purple-700 hover:bg-rose-600 active:bg-rose-700 focus:outline-none focus:ring focus:ring-rose-300
                             text-white py-1 px-4 rounded-full"
                             >Take the step
                         </button>
                     </div>
-                    <p>
+                    <p class="font-semibold">
                         Telephone: 07973 953528
                     </p>
                 </div>
@@ -237,7 +237,7 @@
                         Group counselling from £65.00 per session
                     </p>
                     <div class="flex flex-col items-center">
-                        <div class="border border-black border-b w-2/3"></div>
+                        <div class="border-1 border-purple-700 border-b w-2/3"></div>
                     </div>
                     <div class="space-y-4 flex flex-col items-center">
                         <p class="">
@@ -249,6 +249,23 @@
                         <p class="">
                             I do not ask for proof as, from the outset, our relationship is built on trust
                         </p>
+                    </div>
+                </div>
+            </div>
+            <div class="modal" tabindex="-1" id="modal" role="dialog">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">thecouragetobe has received your message</h5>
+                        </div>
+                        <div class="modal-body">
+                            <p class="modal-message">Thank you for taking the first step. I'll be in touch very soon, Brian"</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="bg-purple-700 hover:bg-rose-600 active:bg-rose-700 focus:outline-none focus:ring focus:ring-rose-300
+                            text-white py-1 px-4 rounded-full" data-bs-dismiss="modal"
+                                id="closing-btn">Close</button>
+                        </div>
                     </div>
                 </div>
             </div>
