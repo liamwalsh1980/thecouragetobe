@@ -28,9 +28,9 @@ def index():
     return render_template("index.html", index=index)
 
 
-# @app.route("/contact", methods=["GET", "POST"])
-# def contact():
-#     return render_template("contact.html")
+@app.route("/contact", methods=["GET", "POST"])
+def contact():
+    return render_template("contact.html")
 
 
 @app.route("/proctors_model")
