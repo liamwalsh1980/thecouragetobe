@@ -3,18 +3,18 @@
 
     <section class="bg-white">
         <div id="hero-image" class="h-screen">
-            <h1 class="text-lg md:text-2xl font-bold py-8 text-center">
+            <h1 class="text-lg md:text-2xl font-bold py-8 text-center text-purple-200">
                 Welcome to thecouragetobe.org blog
             </h1>
             {% for blog in blogs %}
             <div class="max-w-screen-xl mx-auto px-8 flex flex-col justify-center items-center" x-data="{ open: false }"> 
-                <div class="border border-purple-500 rounded-t-md bg-white p-2 w-full sm:w-5/6 md:w-3/4 lg:w-2/3 space-y-2 p-4">
-                    <button class="md:text-xl font-bold w-full text-left text-purple-900 hover:text-lime-700" @click="open = ! open">{{ blog.blog_name }}
+                <div class="border-1 border-purple-500 rounded-t-md bg-white p-2 w-full sm:w-5/6 md:w-3/4 lg:w-2/3 space-y-2 p-4">
+                    <button class="md:text-xl font-bold w-full text-left text-purple-400 hover:text-purple-900 focus:text-purple-900" @click="open = ! open">{{ blog.blog_name }}
                         <div class="text-sm italic font-light text-black">Category: {{ blog.category_name }}</div>
+                        <div class="text-sm italic font-light text-black pt-0">Posted by Brian on {{ blog.publish_date }}</div>
                     </button>
                     <div x-show="open">
                         <div class="text-purple-900 pt-4">{{ blog.blog_details }}</div>
-                        <div class="text-sm italic font-light text-black pt-2">Posted by Brian on {{ blog.publish_date }}</div>
                     </div>
                 </div>
             </div>

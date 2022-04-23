@@ -31,7 +31,7 @@
     <!-- About Brian -->
     <section class="bg-white">
         <div class="max-w-screen-xl mx-auto p-8 text-center space-y-8">
-            <h1 class="text-lg md:text-2xl font-bold">
+            <h1 class="text-lg md:text-2xl font-bold text-purple-900">
                 About Brian
             </h1>
             <p>
@@ -69,7 +69,7 @@
                 <div class="w-36 h-36 rounded-full flex items-center justify-center bg-gradient-to-br from-violet-900 to-pink-800 via-pink-400">
                     <i class="fa-solid fa-award text-6xl text-indigo-800"></i>
                 </div>
-                <div class="text-lg md:text-2xl font-bold my-4 text-center">My Qualifications</div>
+                <div class="text-lg md:text-2xl font-bold my-4 text-center text-purple-900">My Qualifications</div>
                 <div class="md:max-h-40 lg:max-h-20 space-y-2 text-center">
                     <p class="">Level 3 Certificate in Counselling Skills and Theory</p>
                     <p class="">Level 4 Diploma in Integrative Counselling</p>
@@ -83,10 +83,10 @@
                 <div class="w-36 h-36 rounded-full flex items-center justify-center bg-gradient-to-t from-sky-700 to-orange-200 via-gray-400">
                     <i class="fa-solid fa-shield-heart text-6xl text-indigo-800"></i>
                 </div>
-                <div class="text-lg md:text-2xl font-bold my-4 text-center">Keeping You Safe</div>
+                <div class="text-lg md:text-2xl font-bold my-4 text-center text-purple-900">Keeping You Safe</div>
                 <div class="md:max-h-40 lg:max-h-20 space-y-2 text-center">
-                    <p class="">I am a registered member (103666) of <a href="https://www.bacp.co.uk/" target="_blank" class="text-purple-700 hover:text-rose-600">BA​​CP</a> and adhere to its 
-                        <a href="https://www.bacp.co.uk/events-and-resources/ethics-and-standards/ethical-framework-for-the-counselling-professions/" target="_blank" class="text-purple-700 hover:text-rose-600">Ethical Framework</a>​</p>
+                    <p class="">I am a registered member (103666) of <a href="https://www.bacp.co.uk/" target="_blank" class="text-purple-700 hover:text-purple-400">BA​​CP</a> and adhere to its 
+                        <a href="https://www.bacp.co.uk/events-and-resources/ethics-and-standards/ethical-framework-for-the-counselling-professions/" target="_blank" class="text-purple-700 hover:text-purple-400">Ethical Framework</a>​</p>
                     <p class="">I receive regular clinical supervision</p>
                     <p class="">I hold appropriate public liability insurance</p>
                     <p class="">I am committed to regular Continuing Professional Development</p>
@@ -106,7 +106,7 @@
     <section class="bg-white" id="counselling">
         <div class="max-w-screen-xl mx-auto p-8 text-center flex flex-col lg:flex-row items-center">
             <div class="pb-8 lg:pb-0 space-y-8 w-full">
-                <div class="text-lg md:text-2xl font-bold my-2">What is Counselling ?</div>
+                <div class="text-lg md:text-2xl font-bold my-2 text-purple-900">What is Counselling ?</div>
                 <p class="lg:text-left">
                     The British Association for Counselling and Psychotherapy (BACP) defines counselling and psychotherapy as:
                 </p>
@@ -145,11 +145,11 @@
         <div class="max-w-screen-xl mx-auto p-8 text-center flex flex-col lg:flex-row items-center">
             <div class="pb-8 lg:pb-0 space-y-8 w-full text-center">
                 <div class="md:text-center">
-                    <div class="text-lg md:text-2xl font-bold mt-2 text-center pb-8">Supervision and Staff Care</div>
+                    <div class="text-lg md:text-2xl font-bold mt-2 text-center pb-8 text-purple-900">Supervision and Staff Care</div>
                     <p class="lg:text-left">
                         Holding a Diploma in Clinical Supervision, I practice supervision and staff care within the professions of counselling 
                         and the education sector. My experience and expertise, coupled with my chosen approach (<a aria-label="Proctors Model" 
-                        href="{{ url_for('proctors_model') }}" class="text-purple-700 hover:text-rose-600">Proctor’s Model 
+                        href="{{ url_for('proctors_model') }}" class="text-purple-700 hover:text-purple-400">Proctor’s Model 
                         of Clinical Supervision​</a>) enables my work to be fully transferable to other professions and disciplines. The ‘Restorative’ 
                         facet of the model is particularly effective in allowing an individual to feel empowered and valued - often all that is 
                         needed for emotional efficacy and enhanced motivation.
@@ -183,8 +183,10 @@
             <div id="contact-form-mobile" class="lg:w-1/2 flex flex-col sm:flex-row lg:flex-col items-center sm:space-x-24 space-y-8 sm:space-y-0 lg:space-y-24 lg:space-x-0 lg:pl-20">
                 <a href="https://www.bacp.co.uk/" target="_blank" class="text-indigo-600 hover:text-indigo-800">
                     <img class="w-60 h-28" src="{{ ('static/images/bacp.png') }}" alt="BACP logo"> 
-                </a>​
-                <img class="w-56 h-52" src="{{ ('static/images/certified-counsellor.png') }}" alt="Certified Counsellor logo"> 
+                </a>
+                <a href="" target="_blank" class="text-indigo-600 hover:text-indigo-800">​
+                    <img class="w-52 h-52" src="{{ ('static/images/certified-counsellor.png') }}" alt="Certified Counsellor logo"> 
+                </a>
             </div>
         </div>
     </section>
@@ -197,24 +199,24 @@
                         Contact Me
                     </p>
                     <div class="">
-                        <input id="name" name="name" type="text" minlength="1" maxlength="100" class="validate w-80 pl-1 rounded" placeholder="Name" required>
+                        <input id="name" name="name" type="text" minlength="1" maxlength="100" class="validate w-80 px-1 rounded" placeholder="Name*" required>
                     </div>
                     <div class="">
-                        <input id="email" name="email" type="email" minlength="1" maxlength="100" class="validate w-80 pl-1 rounded" placeholder="Email Address " required>
+                        <input id="email" name="email" type="email" minlength="1" maxlength="100" class="validate w-80 px-1 rounded" placeholder="Email Address*" required>
                     </div>
                     <div class="">
-                        <input id="number" name="number" type="number" minlength="1" maxlength="11" pattern="^[a-zA-Z]{1,100}$" class="validate w-80 pl-1 rounded" placeholder="Contact Number" required>
+                        <input id="number" name="number" type="number" minlength="1" maxlength="11" pattern="^[a-zA-Z]{1,100}$" class="validate w-80 px-1 rounded" placeholder="Contact Number*" required>
                     </div>
                     <div class="">
-                        <input id="age" name="age" type="number" minlength="1" maxlength="3" pattern="^[a-zA-Z]{1,100}$" class="validate w-80 pl-1 rounded" placeholder="Age">
+                        <input id="age" name="age" type="number" minlength="1" maxlength="3" pattern="^[a-zA-Z]{1,100}$" class="validate w-80 px-1 rounded" placeholder="Age">
                     </div>
                     <div class="">
-                        <textarea id="message" name="message" type="text" minlength="10" maxlength="200" class="validate w-80 h-24 pl-1 rounded" placeholder="Other Information" ></textarea>
+                        <textarea id="message" name="message" type="text" minlength="3" maxlength="200" pattern="^[a-zA-Z]{3,200}$" class="validate w-80 h-24 px-1 rounded" placeholder="Some information about you and why you are seeking counselling at this point (two or three words will do)"></textarea>
                     </div>
                     <div class="">
                         <button 
                             type="submit" value="submit"
-                            class="bg-purple-700 hover:bg-rose-600 active:bg-rose-700 focus:outline-none focus:ring focus:ring-rose-300
+                            class="bg-purple-700 hover:bg-purple-900 active:bg-purple-900 focus:outline-none focus:ring focus:ring-lime-700
                             text-white py-1 px-4 rounded-full"
                             >Take the step
                         </button>
@@ -237,7 +239,7 @@
                         Group counselling from £65.00 per session
                     </p>
                     <div class="flex flex-col items-center">
-                        <div class="border-1 border-purple-700 border-b w-2/3"></div>
+                        <div class="border-1 border-lime-700 border-b w-2/3"></div>
                     </div>
                     <div class="space-y-4 flex flex-col items-center">
                         <p class="">
@@ -254,15 +256,18 @@
             </div>
             <div class="modal" tabindex="-1" id="modal" role="dialog">
                 <div class="modal-dialog">
-                    <div class="modal-content">
+                    <div class="modal-content bg-purple-100">
                         <div class="modal-header">
-                            <h5 class="modal-title">thecouragetobe has received your message</h5>
+                            <div class="modal-title">
+                                <a aria-label="Home" href="{{ url_for('index') }}"><h1 class="text-2xl font-bold text-purple-900 hover:text-purple-700">thecouragetobe.org</h1></a>
+                                <h2 class="font-medium text-purple-400">Brian Walsh Counselling</h2>
+                            </div>
                         </div>
                         <div class="modal-body">
-                            <p class="modal-message">Thank you for taking the first step. I'll be in touch very soon, Brian"</p>
+                            <p class="modal-message">Thank you for taking the first step. <br>I'll be in touch very soon, Brian"</p>
                         </div>
                         <div class="modal-footer">
-                            <button type="button" class="bg-purple-700 hover:bg-rose-600 active:bg-rose-700 focus:outline-none focus:ring focus:ring-rose-300
+                            <button type="button" class="bg-purple-700 hover:bg-purple-900 active:bg-purple-900 focus:outline-none focus:ring focus:ring-lime-700
                             text-white py-1 px-4 rounded-full" data-bs-dismiss="modal"
                                 id="closing-btn">Close</button>
                         </div>
