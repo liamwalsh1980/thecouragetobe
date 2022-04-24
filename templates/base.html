@@ -48,7 +48,7 @@
     </style>
     <header class="bg-white sticky top-0 border-b border-purple-500 z-10">
         <!-- Main Navbar -->
-        <div class="px-8 py-4 flex items-center justify-between hidden lg:flex" aria-labelledby="Main Navbar">
+        <div class="px-8 py-4 flex items-center justify-between hidden lg:flex" aria-labelledby="main-navbar">
             <div>
                 <a aria-label="Home" href="{{ url_for('index') }}"><h1 class="text-2xl font-bold text-purple-900 hover:text-purple-700">thecouragetobe.org</h1></a>
                 <h2 class="font-medium text-purple-400">Brian Walsh Counselling</h2>
@@ -70,7 +70,7 @@
             </nav>
         </div>
         <!-- Mobile sidenav -->
-        <div x-data="{ open: true }" aria-labelledby="Mobile Navbar">
+        <div x-data="{ open: true }" aria-labelledby="mobile-navbar">
             <div class="py-2 flex justify-between px-4 lg:hidden">
                 <div>
                     <a aria-label="Home" href="{{ url_for('index') }}"><h1 class="text-2xl font-bold text-purple-900 hover:text-purple-700">thecouragetobe.org</h1></a>
@@ -113,7 +113,7 @@
             </div>
             <!-- Mobile Dropdown -->
             <div class="bg-white w-full text-center py-8" 
-            x-show="! open" @click.outside="open = true" aria-labelledby="Mobile Dropdown">
+            x-show="! open" @click.outside="open = true" aria-labelledby="mobile-dropdown">
                 <ul class="flex flex-col text-purple-700 space-y-4"> 
                     <li><a aria-label="Home" class="hover:text-purple-400 active:text-purple-400 focus:text-purple-400" href="{{ url_for('index') }}">Home</a></li>
                     <div class="flex flex-col items-center">
