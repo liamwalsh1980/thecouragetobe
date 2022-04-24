@@ -40,7 +40,7 @@
     </script>
 </head>
 
-<body class="">
+<body>
     <style>
         body {
           font-family: "Hind", sans-serif;
@@ -48,7 +48,7 @@
     </style>
     <header class="bg-white sticky top-0 border-b border-purple-500 z-10">
         <!-- Main Navbar -->
-        <div class="px-8 py-4 flex items-center justify-between hidden lg:flex">
+        <div class="px-8 py-4 flex items-center justify-between hidden lg:flex" aria-labelledby="Main Navbar">
             <div>
                 <a aria-label="Home" href="{{ url_for('index') }}"><h1 class="text-2xl font-bold text-purple-900 hover:text-purple-700">thecouragetobe.org</h1></a>
                 <h2 class="font-medium text-purple-400">Brian Walsh Counselling</h2>
@@ -70,7 +70,7 @@
             </nav>
         </div>
         <!-- Mobile sidenav -->
-        <div x-data="{ open: true }">
+        <div x-data="{ open: true }" aria-labelledby="Mobile Navbar">
             <div class="py-2 flex justify-between px-4 lg:hidden">
                 <div>
                     <a aria-label="Home" href="{{ url_for('index') }}"><h1 class="text-2xl font-bold text-purple-900 hover:text-purple-700">thecouragetobe.org</h1></a>
@@ -113,7 +113,7 @@
             </div>
             <!-- Mobile Dropdown -->
             <div class="bg-white w-full text-center py-8" 
-            x-show="! open" @click.outside="open = true">
+            x-show="! open" @click.outside="open = true" aria-labelledby="Mobile Dropdown">
                 <ul class="flex flex-col text-purple-700 space-y-4"> 
                     <li><a aria-label="Home" class="hover:text-purple-400 active:text-purple-400 focus:text-purple-400" href="{{ url_for('index') }}">Home</a></li>
                     <div class="flex flex-col items-center">
@@ -146,23 +146,23 @@
     </main>
 
     <!-- Footer -->
-    <footer class="2xl:max-w-screen-xl mx-auto">
+    <footer class="2xl:max-w-screen-xl mx-auto" aria-labelledby="footer">
         <div class="px-8 py-4 flex items-center justify-center lg:justify-between">
             <div class="hidden lg:block">
-                <a href="https://www.bacp.co.uk/" target="_blank">
+                <a aria-label="BACP website homepage" href="https://www.bacp.co.uk/" target="_blank">
                     <img class="w-28 sm:w-32 h-12 sm:h-14" src="{{ ('static/images/bacp.png') }}" alt="BACP logo"> 
                 </a>
             </div>
             <div>
                 <div class="text-center space-x-4">
-                    <a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook-square text-3xl text-[#3b5998] hover:text-purple-900 active:text-purple-900"></i></a>
-                    <a href="mailto: brianwalshcounselling@gmail.com" target="_blank"><i class="fa-solid fa-square-envelope text-3xl text-[#c4302b] hover:text-purple-900 active:text-purple-900"></i></a>
-                    <a href="{{ url_for('thecouragetobe_blog') }}"><i class="fa-solid fa-blog text-3xl text-[#fc4f08] hover:text-purple-900 active:text-purple-900"></i></a>
+                    <a aria-label="Facebook" href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook-square text-3xl text-[#3b5998] hover:text-purple-900 active:text-purple-900"></i></a>
+                    <a aria-label="Email" href="mailto: brianwalshcounselling@gmail.com" target="_blank"><i class="fa-solid fa-square-envelope text-3xl text-[#c4302b] hover:text-purple-900 active:text-purple-900"></i></a>
+                    <a aria-label="Blog" href="{{ url_for('thecouragetobe_blog') }}"><i class="fa-solid fa-blog text-3xl text-[#fc4f08] hover:text-purple-900 active:text-purple-900"></i></a>
                 </div>
                 <p class="text-purple-700">&copy Brian Walsh Councelling</p>
             </div>
             <div class="hidden lg:block">
-                <a href="" target="_blank">
+                <a aria-label="" href="" target="_blank">
                     <img class="w-24 h-24" src="{{ ('static/images/certified-counsellor.png') }}" alt="Certified Counsellor logo"> 
                 </a>
             </div>
