@@ -846,6 +846,21 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-bottom: 0.25rem;
 }
 
+.px-32 {
+  padding-left: 8rem;
+  padding-right: 8rem;
+}
+
+.px-64 {
+  padding-left: 16rem;
+  padding-right: 16rem;
+}
+
+.px-56 {
+  padding-left: 14rem;
+  padding-right: 14rem;
+}
+
 .pt-0 {
   padding-top: 0px;
 }
@@ -1021,24 +1036,14 @@ Ensure the default browser behavior of the `hidden` attribute.
   color: rgb(88 28 135 / var(--tw-text-opacity));
 }
 
-.hover\:text-indigo-800:hover {
-  --tw-text-opacity: 1;
-  color: rgb(55 48 163 / var(--tw-text-opacity));
-}
-
-.hover\:text-purple-500:hover {
-  --tw-text-opacity: 1;
-  color: rgb(168 85 247 / var(--tw-text-opacity));
-}
-
 .hover\:text-purple-200:hover {
   --tw-text-opacity: 1;
   color: rgb(233 213 255 / var(--tw-text-opacity));
 }
 
-.hover\:text-purple-300:hover {
+.hover\:text-indigo-800:hover {
   --tw-text-opacity: 1;
-  color: rgb(216 180 254 / var(--tw-text-opacity));
+  color: rgb(55 48 163 / var(--tw-text-opacity));
 }
 
 .focus\:text-purple-400:focus {
