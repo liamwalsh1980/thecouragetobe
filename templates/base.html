@@ -46,7 +46,7 @@
           font-family: "Hind", sans-serif;
         }
     </style>
-    <header class="bg-white sticky top-0 border-b border-purple-500 z-10" id="home">
+    <header class="bg-white sticky top-0 border-b border-purple-500 z-10">
         <!-- Main Navbar -->
         <div class="px-8 py-4 flex items-center justify-between hidden lg:flex" aria-labelledby="main-navbar">
             <div>
@@ -55,7 +55,7 @@
             </div>
             <nav>
                 <ul class="flex space-x-2 lg:space-x-6 xl:space-x-8 text-purple-700 font-medium text-sm lg:text-xs xl:text-sm"> 
-                    <li><a aria-label="Home" class="hover:text-purple-400 active:text-purple-400 focus:text-purple-400" href="https://thecouragetobe.herokuapp.com/#home">Home</a></li>
+                    <li><a aria-label="Home" class="hover:text-purple-400 active:text-purple-400 focus:text-purple-400" href="{{ url_for('index') }}">Home</a></li>
                     <div class="border-1 border-rose-200"></div>
                     <li><a aria-label="What is counselling" class="hover:text-purple-400 active:text-purple-400 focus:text-purple-400" href="https://thecouragetobe.herokuapp.com/#counselling">What is Counselling</a></li>
                     <div class="border-1 border-rose-200"></div>
@@ -115,7 +115,7 @@
             <div class="bg-white w-full text-center py-8" 
             x-show="! open" @click.outside="open = true" aria-labelledby="mobile-dropdown">
                 <ul class="flex flex-col text-purple-700 space-y-4"> 
-                    <li><a aria-label="Home" class="hover:text-purple-400 active:text-purple-400 focus:text-purple-400" href="https://thecouragetobe.herokuapp.com/#home">Home</a></li>
+                    <li><a aria-label="Home" class="hover:text-purple-400 active:text-purple-400 focus:text-purple-400" href="{{ url_for('index') }}">Home</a></li>
                     <div class="flex flex-col items-center">
                         <div class="border-1 border-rose-200 border-b w-1/2 sm:w-1/4"></div>
                     </div>
