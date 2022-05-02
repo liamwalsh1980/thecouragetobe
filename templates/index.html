@@ -80,7 +80,7 @@
                 </div>
                 <div class="text-lg md:text-2xl font-bold my-4 text-center text-purple-900">Keeping You Safe</div>
                 <div class="md:max-h-40 lg:max-h-20 space-y-2 text-center">
-                    <p id="counselling-mobile" class="">I am a registered member (103666) of <a href="https://www.bacp.co.uk/" target="_blank" class="text-purple-700 hover:text-purple-400">BA​​CP</a> and adhere to its 
+                    <p class="">I am a registered member (103666) of <a href="https://www.bacp.co.uk/" target="_blank" class="text-purple-700 hover:text-purple-400">BA​​CP</a> and adhere to its 
                         <a aria-label="BACP website Ethical Framework" href="https://www.bacp.co.uk/events-and-resources/ethics-and-standards/ethical-framework-for-the-counselling-professions/" target="_blank" class="text-purple-700 hover:text-purple-400">Ethical Framework</a>​</p>
                     <p class="">I receive regular clinical supervision</p>
                     <p class="">I hold appropriate public liability insurance</p>
@@ -90,7 +90,7 @@
         </div>
     </section>
     <!-- Pebble stepping stones image -->
-    <section class="bg-white">
+    <section class="bg-white" id="counselling-mobile">
         <div class="max-w-screen-xl mx-auto px-4 md:px-0 flex flex-col justify-center w-full md:w-5/6 lg:w-3/4 xl:w-2/3">
             <div class="flex justify-center">
                 <img src="{{ ('static/images/pebbles-background.jpg') }}" alt="pebble stepping stones">
@@ -128,7 +128,7 @@
         </div>
     </section>
     <!-- Pebbles stacked up image -->
-    <section class="bg-white">
+    <section class="bg-white" id="supervision">
         <div class="max-w-screen-xl mx-auto px-4 md:px-0 flex flex-col justify-center w-full md:w-5/6 lg:w-3/4 xl:w-2/3">
             <div class="flex justify-center">
                 <img src="{{ ('static/images/green-background.jpg') }}" alt="pebbles stacked up">
@@ -136,7 +136,7 @@
         </div>
     </section>
     <!-- Supervision, staff care with BACP and Certified Counsellor logos -->
-    <section class="bg-white" id="supervision">
+    <section class="bg-white">
         <div class="max-w-screen-xl mx-auto p-8 text-center flex flex-col lg:flex-row items-center">
             <div class="pb-8 lg:pb-0 space-y-8 w-full text-center">
                 <div class="md:text-center" aria-labelledby="supervision-and-staff-care">
@@ -175,11 +175,11 @@
                     </div>
                 </div>
             </div>
-            <div id="contact-form-mobile" class="lg:w-1/2 flex flex-col sm:flex-row lg:flex-col items-center sm:space-x-24 space-y-8 sm:space-y-0 lg:space-y-24 lg:space-x-0 lg:pl-20">
+            <div class="lg:w-1/2 flex flex-col sm:flex-row lg:flex-col items-center sm:space-x-24 space-y-8 sm:space-y-0 lg:space-y-24 lg:space-x-0 lg:pl-20">
                 <a aria-label="BACP website homepage" href="https://www.bacp.co.uk/" target="_blank" class="text-indigo-600 hover:text-indigo-800">
                     <img class="w-60 h-28" src="{{ ('static/images/bacp.png') }}" alt="BACP logo"> 
                 </a>
-                <a aria-label="" href="" target="_blank" class="text-indigo-600 hover:text-indigo-800">​
+                <a id="contact-form-mobile" aria-label="" href="" target="_blank" class="text-indigo-600 hover:text-indigo-800">​
                     <img class="w-52 h-52" src="{{ ('static/images/certified-counsellor.png') }}" alt="Certified Counsellor logo"> 
                 </a>
             </div>
