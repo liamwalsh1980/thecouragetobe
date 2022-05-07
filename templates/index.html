@@ -91,14 +91,14 @@
     </section>
     <!-- Pebble stepping stones image -->
     <section class="bg-white">
-        <div class="max-w-screen-xl mx-auto px-4 md:px-0 flex flex-col justify-center w-full md:w-5/6 lg:w-3/4 xl:w-2/3" id="counselling">
+        <div class="max-w-screen-xl mx-auto px-4 md:px-0 flex flex-col justify-center w-full md:w-5/6 lg:w-3/4 xl:w-2/3">
             <div class="flex justify-center">
                 <img src="{{ ('static/images/pebbles-background.jpg') }}" alt="pebble stepping stones">
             </div>
         </div>
     </section>
     <!-- What is counselling and Cycle image -->
-    <section class="bg-white">
+    <section class="bg-white" id="counselling">
         <div class="max-w-screen-xl mx-auto p-8 text-center flex flex-col lg:flex-row items-center">
             <div class="pb-8 lg:pb-0 space-y-8 w-full" aria-labelledby="what-is-counselling">
                 <div class="text-lg md:text-2xl font-bold my-2 text-purple-900">What is Counselling ?</div>
@@ -129,14 +129,14 @@
     </section>
     <!-- Pebbles stacked up image -->
     <section class="bg-white">
-        <div class="max-w-screen-xl mx-auto px-4 md:px-0 flex flex-col justify-center w-full md:w-5/6 lg:w-3/4 xl:w-2/3" id="supervision">
+        <div class="max-w-screen-xl mx-auto px-4 md:px-0 flex flex-col justify-center w-full md:w-5/6 lg:w-3/4 xl:w-2/3">
             <div class="flex justify-center">
                 <img src="{{ ('static/images/green-background.jpg') }}" alt="pebbles stacked up">
             </div>
         </div>
     </section>
     <!-- Supervision, staff care with BACP and Certified Counsellor logos -->
-    <section class="bg-white">
+    <section class="bg-white" id="supervision">
         <div class="max-w-screen-xl mx-auto p-8 text-center flex flex-col lg:flex-row items-center">
             <div class="pb-8 lg:pb-0 space-y-8 w-full text-center">
                 <div class="md:text-center" aria-labelledby="supervision-and-staff-care">
@@ -179,14 +179,14 @@
                 <a aria-label="BACP website homepage" href="https://www.bacp.co.uk/" target="_blank" class="text-indigo-600 hover:text-indigo-800">
                     <img class="w-60 h-28" src="{{ ('static/images/bacp.png') }}" alt="BACP logo"> 
                 </a>
-                <a aria-label="" href="" target="_blank" class="text-indigo-600 hover:text-indigo-800" id="contact-form">​
+                <a aria-label="" href="" target="_blank" class="text-indigo-600 hover:text-indigo-800">​
                     <img class="w-52 h-52" src="{{ ('static/images/certified-counsellor.png') }}" alt="Certified Counsellor logo"> 
                 </a>
             </div>
         </div>
     </section>
     <!-- Contact form -->
-    <section class="bg-gradient-to-b from-lime-700 to-stone-500 via-lime-200">
+    <section class="bg-gradient-to-b from-lime-700 to-stone-500 via-lime-200" id="contact-form">
         <form onsubmit="return sendMail(this);" method="post, get">
             <div class="max-w-screen-xl mx-auto p-8 space-y-8 md:space-y-0 flex flex-col md:flex-row">
                 <div class="space-y-4 flex flex-col items-center md:w-1/2" aria-labelledby="contact-me">

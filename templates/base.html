@@ -39,16 +39,16 @@
         })();
     </script>
 </head>
-
+<!-- sticky top-0 -->
 <body>
     <style>
         body {
           font-family: "Hind", sans-serif;
         }
     </style>
-    <header class="bg-white sticky top-0 border-b border-purple-500 z-10" id="home">
+    <header class="bg-white border-b border-purple-500 z-10">
         <!-- Main Navbar -->
-        <div class="px-8 py-4 flex items-center justify-between hidden lg:flex" aria-labelledby="main-navbar">
+        <div class="px-8 py-4 flex items-center justify-between hidden lg:flex" aria-labelledby="main-navbar" id="home">
             <div>
                 <a aria-label="Home" href="{{ url_for('index') }}"><h1 class="text-2xl font-bold text-purple-900 hover:text-purple-700">thecouragetobe.org</h1></a>
                 <h2 class="font-medium text-purple-400">Brian Walsh Counselling</h2>
