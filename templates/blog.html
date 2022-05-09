@@ -1,32 +1,88 @@
 {% extends "base.html" %}
 {% block content %}
 
-    <section class="bg-white" aria-labelledby="Blog">
-        <div id="hero-image" class="h-screen" aria-labelledby="blog">
-            <!-- <h1 class="text-lg md:text-2xl font-bold py-8 text-center text-purple-200">
-                Welcome to thecouragetobe.org blog
-            </h1>
-            {% for blog in blogs %}
-            <div class="max-w-screen-xl mx-auto px-8 flex flex-col justify-center items-center" x-data="{ open: false }"> 
-                <div class="border-1 border-purple-500 rounded-t-md bg-white p-2 w-full sm:w-5/6 md:w-3/4 lg:w-2/3 space-y-2 p-4">
-                    <button class="md:text-xl font-bold w-full text-left text-purple-400 hover:text-purple-900 focus:text-purple-900" @click="open = ! open">{{ blog.blog_name }}
-                        <div class="text-sm italic font-light text-black">Category: {{ blog.category_name }}</div>
-                        <div class="text-sm italic font-light text-black pt-0">Posted by Brian on {{ blog.publish_date }}</div>
-                    </button>
-                    <div x-show="open">
-                        <div class="text-purple-900 pt-4">{{ blog.blog_details }}</div>
-                    </div>
+<section>
+    <!-- flash messages with Jinja if statments, with statements and for loops -->
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            {% for message in messages %}
+                <div class="w-full flashes text-center py-4 bg-[#5bc0de] text-white">
+                    <h2 class="flash-messages">
+                        {{ message }}
+                    </h2>
+                </div>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+</section>
+
+<section class="bg-white" aria-labelledby="Blog">
+    <div id="hero-image" class="min-h-screen" aria-labelledby="blog">
+        <h1 class="text-lg md:text-2xl font-bold py-8 text-center text-purple-200">
+            Welcome to thecouragetobe.org blog
+        </h1>
+        {% for blog in blogs %}
+        <div class="max-w-screen-xl mx-auto px-8 flex flex-col justify-center items-center" x-data="{ open: false }"> 
+            <div class="border-1 border-purple-500 rounded-t-md bg-white p-2 w-full sm:w-5/6 md:w-3/4 lg:w-2/3 space-y-4 p-4">
+                <div class="md:text-xl font-bold w-full text-left text-purple-400 hover:text-purple-900 focus:text-purple-900" @click="open = ! open">{{ blog.blog_name }}
+                    <div class="text-sm italic font-light text-black">Category: {{ blog.category_name }}</div>
+                    <div class="text-sm italic font-light text-black pt-0 pb-3">Posted by Brian on {{ blog.publish_date }}</div>
+                </div>
+                <div x-show="open">
+                    <div class="h-[1px] bg-purple-200 w-full mt-4"></div>
+                    <div class="text-purple-900 pt-4">{{ blog.blog_details }}</div>
+                    <div class="h-[1px] bg-purple-200 w-full mt-4"></div>
                 </div>
             </div>
-            {% endfor %} -->
-
-            <div class="pt-8">
-                <h1 class="text-lg md:text-2xl font-bold text-center pb-4 text-purple-900">
-                    thecouragetobe blog coming soon
-                </h1>
-                <a aria-label="Home" href="{{ url_for('index') }}"><i class="fa-solid fa-house text-6xl flex flex-col items-center text-purple-900 hover:text-purple-200"></i></a>
-            </div>
         </div>
-    </section>
+        {% endfor %}
+        <div class="max-w-screen-xl mx-auto px-8 py-8 text-center flex justify-center space-x-2">
+            {% if session.user %}
+                <div class="">
+                    <a 
+                        aria-label="Blog_admin" href="{{ url_for('blog_admin') }}"
+                        class="bg-purple-900 hover:bg-lime-700 active:bg-lime-700 focus:outline-none focus:ring focus:ring-lime-700
+                        text-white py-1 px-4 rounded-full"
+                        >Blog Admin
+                    </a>
+                </div>
+                <div class="">
+                    <a 
+                        aria-label="Logout" href="{{ url_for('logout') }}"
+                        class="bg-purple-900 hover:bg-lime-700 active:bg-lime-700 focus:outline-none focus:ring focus:ring-lime-700
+                        text-white py-1 px-4 rounded-full"
+                        >Logout
+                    </a>
+                </div>
+            {% else %}
+                <div class="">
+                    <a 
+                        aria-label="Admin_Login" href="{{ url_for('login') }}"
+                        class="bg-purple-900 hover:bg-lime-700 active:bg-lime-700 focus:outline-none focus:ring focus:ring-lime-700
+                        text-white py-1 px-4 rounded-full"
+                        >Admin Login
+                    </a>
+                </div>
+            {% endif %}
+        </div>
+
+        <!-- <div class="pt-8">
+            <h1 class="text-lg md:text-2xl font-bold text-center pb-4 text-purple-900">
+                thecouragetobe blog coming soon
+            </h1>
+            <a aria-label="Home" href="{{ url_for('index') }}"><i class="fa-solid fa-house text-6xl flex flex-col items-center text-purple-900 hover:text-purple-200"></i></a>
+        </div> -->
+
+    </div>
+</section>
+
+<!-- <div class="">
+    <a 
+        aria-label="Register_here" href="{{ url_for('register') }}"
+        class="bg-purple-900 hover:bg-lime-700 active:bg-lime-700 focus:outline-none focus:ring focus:ring-lime-700
+        text-white py-1 px-4 rounded-full"
+        >Register User
+    </a>
+</div> -->
 
 {% endblock %}

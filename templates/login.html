@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% block content %}
+
+<section>
+    <!-- flash messages with Jinja if statments, with statements and for loops -->
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            {% for message in messages %}
+                <div class="w-full flashes text-center py-4 bg-[#5bc0de] text-white">
+                    <h2 class="flash-messages">
+                        {{ message }}
+                    </h2>
+                </div>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+</section>
+
+<!-- Login form -->
+<section class="bg-gradient-to-b from-lime-700 to-stone-500 via-lime-200 min-h-screen">
+    <form method="POST" action="{{ url_for('login') }}">
+        <div class="max-w-screen-xl mx-auto p-8 space-y-8 md:space-y-0">
+            <div class="space-y-4 flex flex-col items-center" aria-labelledby="contact-me">
+                <p class="text-lg md:text-2xl font-bold text-purple-900">
+                    Admin Login
+                </p>
+                <div class="">
+                    <input id="username" name="username" type="text" minlength="1" maxlength="100" 
+                           class="validate w-80 px-1 py-2 rounded" placeholder="Username*" required>
+                </div>
+                <div class="">
+                    <input id="password" name="password" type="password" minlength="1" maxlength="100" 
+                           class="validate w-80 px-1 py-2 rounded" placeholder="Password*" required>
+                </div>
+                <div class="">
+                    <button 
+                        type="submit" value="submit"
+                        class="bg-purple-700 hover:bg-purple-900 active:bg-purple-900 focus:outline-none focus:ring focus:ring-lime-700
+                        text-white py-1 px-4 rounded-full"
+                        >Login
+                    </button>
+                </div>
+            </div>
+        </div>
+    </form> 
+</section>
+
+{% endblock %}

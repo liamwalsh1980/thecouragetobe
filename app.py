@@ -40,8 +40,149 @@ def protecting_you():
 
 @app.route("/thecouragetobe_blog")
 def thecouragetobe_blog():
-    blogs = mongo.db.blogs.find()
+    blogs = list(
+        mongo.db.blogs.find().sort("publish_date", -1))
     return render_template("blog.html", blogs=blogs)
+
+
+@app.route("/register", methods=["GET", "POST"])
+def register():
+    if request.method == "POST":
+        # Check if username already exists in database
+        existing_user = mongo.db.users.find_one(
+            {"username": request.form.get("username").lower()})
+
+        # If the username already exists a message is displayed to the user
+        if existing_user:
+            # Takes the user back to the register form to try again
+            return redirect(url_for("register"))
+
+        # Else statement using a dictionary
+        register = {
+            # Username in parentheses is from the name attr in reg template
+            "username": request.form.get("username").lower(),
+            # Password in parentheses is from the name attr in reg template
+            # Werkzeug security helper used below
+            "password": generate_password_hash(request.form.get("password"))
+        }
+        # Calling the function using the insert_one method
+        mongo.db.users.insert_one(register)
+
+        # Put the new user into 'session' cookie
+        session['user'] = request.form.get("username").lower()
+        return redirect(url_for("blog_admin",
+                                username=session["user"]))
+
+    return render_template("register.html")
+
+
+@app.route("/login", methods=["GET", "POST"])
+def login():
+    if request.method == "POST":
+        # Check if username already exists in database
+        existing_user = mongo.db.users.find_one(
+            {"username": request.form.get("username").lower()})
+
+        if existing_user:
+            # Ensure password matches user input
+            # check_password_hash from Werkzeug
+            # Had to use 2 space indenting for PEP8 compliance
+            if check_password_hash(
+              existing_user["password"], request.form.get("password")):
+                session["user"] = request.form.get("username").lower()
+                flash("Welcome, {}".format(request.form.get("username")))
+                return redirect(url_for("blog_admin",
+                                        username=session["user"]))
+            else:
+                # Invalid password match message to user
+                flash("Incorrect Username and/or Password")
+                return redirect(url_for("login"))
+
+        else:
+            # Username doesn't exist message to user
+            flash("Incorrect Username and/or Password")
+            return redirect(url_for("login"))
+
+    # Returns user to main login page to try again
+    return render_template("login.html")
+
+
+@app.route("/blog_admin/", methods=["GET", "POST"])
+def blog_admin():
+    # Only users can access their own profile
+    if not session.get("user"):
+        return render_template("blog.html")
+
+    # Grabs the session user's username from the database
+    username = mongo.db.users.find_one(
+        {"username": session["user"]})["username"]
+
+    if session["user"]:
+        # Admin only can access all
+        if session["user"] == "brian":
+            blogs = list(mongo.db.blogs.find().sort("publish_date", -1))
+        else:
+            # Logged in users will see just their own films
+            blogs = list(
+                mongo.db.blogs.find(
+                    {"created_by": session["user"]}).sort("publish_date", -1))
+        return render_template(
+            "blog_admin.html", username=username, blogs=blogs)
+    return redirect(url_for("login"))
+
+
+# Function for user to logout
+@app.route("/logout")
+def logout():
+    # Remove user from session cookie
+    flash("You have been logged out")
+    session.pop("user")
+    return redirect(url_for("login"))
+
+
+@app.route("/add_post", methods=["GET", "POST"])
+def add_post():
+    if request.method == "POST":
+        # Dictionary created and assigned to 'post'
+        post = {
+            "category_name": request.form.get("category_name"),
+            "blog_name": request.form.get("blog_name"),
+            "blog_details": request.form.get("blog_details"),
+            "publish_date": request.form.get("publish_date"),
+            "created_by": session["user"]
+        }
+        mongo.db.blogs.insert_one(post)
+        flash("Post Added Successfully")
+        return redirect(url_for("blog_admin"))
+
+    categories = mongo.db.categories.find().sort("category_name", 1)
+    return render_template("add_post.html", categories=categories)
+
+
+@app.route("/edit_post/<post_id>", methods=["GET", "POST"])
+def edit_post(post_id):
+    if request.method == "POST":
+        edit = {
+            "category_name": request.form.get("category_name"),
+            "blog_name": request.form.get("blog_name"),
+            "blog_details": request.form.get("blog_details"),
+            "publish_date": request.form.get("publish_date"),
+            "created_by": session["user"]
+        }
+        mongo.db.blogs.update_one({"_id": ObjectId(post_id)}, {"$set": edit})
+        flash("Post Updated Successfully")
+        return redirect(url_for("blog_admin", username=session["user"]))
+
+    post = mongo.db.blogs.find_one({"_id": ObjectId(post_id)})
+    categories = mongo.db.categories.find().sort("category_name", 1)
+    return render_template("edit_post.html", post=post, categories=categories)
+
+
+@app.route("/delete_post/<post_id>")
+def delete_post(post_id):
+    mongo.db.blogs.delete_one({"_id": ObjectId(post_id)})
+    flash("Post Successfully Removed")
+    return redirect(url_for("blog_admin", username=session["user"]))
 
 
 if __name__ == "__main__":

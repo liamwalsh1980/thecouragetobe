@@ -37,6 +37,12 @@
         (function(){
             emailjs.init("yB1DmUyNHp8qzGMD-");
         })();
+        (function () {
+            $(".datepicker").datepicker({
+                clearBtn: true,
+                format: "dd mm yyyy"
+            });
+        });
     </script>
 </head>
 <body>
@@ -170,7 +176,7 @@
 
     <!-- JQuery script from https://code.jquery.com/ to enable JQuery usage -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
-        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>     
     <!-- Local script for JS -->
     <script src="{{ url_for('static', filename='js/script.js') }}"></script>
     <!-- Bootstrap for Modal -->
