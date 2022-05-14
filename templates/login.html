@@ -6,10 +6,12 @@
     {% with messages = get_flashed_messages() %}
         {% if messages %}
             {% for message in messages %}
-                <div class="w-full flashes text-center py-4 bg-[#5bc0de] text-white">
-                    <h2 class="flash-messages">
-                        {{ message }}
-                    </h2>
+                <div class="w-full flashes text-center py-4 bg-[#5bc0de] text-white flex justify-center items-center space-x-2">
+                    <i class="fa-solid fa-bolt text-lg text-purple-700"></i>
+                        <h2 class="flash-messages font-bold text-gray-700 text-2xl">
+                            {{ message }}
+                        </h2>
+                    <i class="fa-solid fa-bolt text-lg text-purple-700"></i>
                 </div>
             {% endfor %}
         {% endif %}
@@ -37,7 +39,7 @@
                         type="submit" value="submit"
                         class="bg-purple-700 hover:bg-purple-900 active:bg-purple-900 focus:outline-none focus:ring focus:ring-lime-700
                         text-white py-1 px-4 rounded-full"
-                        >Login
+                        >Login<i class="fa-duotone fa-arrow-right-to-arc"></i>
                     </button>
                 </div>
             </div>

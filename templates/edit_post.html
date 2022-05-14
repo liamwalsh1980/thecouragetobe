@@ -6,10 +6,12 @@
     {% with messages = get_flashed_messages() %}
         {% if messages %}
             {% for message in messages %}
-                <div class="w-full flashes text-center py-4 bg-[#5bc0de] text-white">
-                    <h2 class="flash-messages">
-                        {{ message }}
-                    </h2>
+                <div class="w-full flashes text-center py-4 bg-[#5bc0de] text-white flex justify-center items-center space-x-2">
+                    <i class="fa-solid fa-bolt text-lg text-purple-700"></i>
+                        <h2 class="flash-messages font-bold text-gray-700 text-2xl">
+                            {{ message }}
+                        </h2>
+                    <i class="fa-solid fa-bolt text-lg text-purple-700"></i>
                 </div>
             {% endfor %}
         {% endif %}
@@ -59,14 +61,20 @@
                     type="submit" value="submit"
                     class="bg-purple-900 hover:bg-lime-700 active:bg-lime-900 focus:outline-none focus:ring focus:ring-lime-900
                     text-white py-1 px-4 rounded-full"
-                    >Edit
+                    >Edit<i class="fa-regular fa-pen-to-square text-sm pl-1 mb-1"></i>
                 </button>
+                <a 
+                    aria-label="Add new category" href="{{ url_for('add_post') }}"
+                    class="bg-purple-900 hover:bg-lime-700 active:bg-lime-900 focus:outline-none focus:ring focus:ring-lime-900
+                    text-white py-[3px] px-4 rounded-full"
+                    >Edit Category<i class="fa-solid fa-plus text-sm pl-1"></i>
+                </a>
                 <div class="">
                     <a 
                         aria-label="Logout" href="{{ url_for('blog_admin') }}"
                         class="bg-purple-900 hover:bg-lime-700 active:bg-lime-900 focus:outline-none focus:ring focus:ring-lime-900
                         text-white py-[3px] px-4 rounded-full"
-                        >Cancel
+                        >Back<i class="fa-regular fa-circle-left text-sm pl-1"></i>
                     </a>
                 </div>
             </div>
