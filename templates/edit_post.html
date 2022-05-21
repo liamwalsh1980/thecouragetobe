@@ -56,24 +56,29 @@
                     <input value="{{ post.publish_date }}" id="publish_date" name="publish_date" type="date" class="form-control validate px-3 text-gray-500">
                 </div>
             </div>
-            <div class="py-8 text-center flex items-center justify-center space-x-2 mb-48">
-                <button 
-                    type="submit" value="submit"
-                    class="bg-purple-900 hover:bg-lime-700 active:bg-lime-900 focus:outline-none focus:ring focus:ring-lime-900
-                    text-white py-1 px-4 rounded-full"
-                    >Edit<i class="fa-regular fa-pen-to-square text-sm pl-1 mb-1"></i>
-                </button>
-                <a 
-                    aria-label="Add new category" href="{{ url_for('add_post') }}"
-                    class="bg-purple-900 hover:bg-lime-700 active:bg-lime-900 focus:outline-none focus:ring focus:ring-lime-900
-                    text-white py-[3px] px-4 rounded-full"
-                    >Edit Category<i class="fa-solid fa-plus text-sm pl-1"></i>
-                </a>
-                <div class="">
+            
+            <div class="py-8 text-center flex flex-row sm:flex-row justify-center gap-x-2 flex-wrap gap-y-4">
+                <div class="flex justify-center items-center">
+                    <button 
+                        type="submit" value="submit"
+                        class="bg-purple-900 hover:bg-lime-700 active:bg-lime-900 focus:outline-none focus:ring focus:ring-lime-900
+                        text-white w-36 max-w-full h-8 rounded-full flex justify-center items-center"
+                        >Edit<i class="fa-regular fa-pen-to-square text-sm pl-1 mb-1"></i>
+                    </button>
+                </div>
+                <div class="flex justify-center items-center">
+                    <a 
+                        aria-label="Add new category" href="{{ url_for('categories') }}"
+                        class="bg-purple-900 hover:bg-lime-700 active:bg-lime-900 focus:outline-none focus:ring focus:ring-lime-900
+                        text-white w-36 max-w-full h-8 rounded-full flex justify-center items-center"
+                        >Edit Category<i class="fa-solid fa-plus text-sm pl-1"></i>
+                    </a>
+                </div>
+                <div class="flex justify-center items-center">
                     <a 
                         aria-label="Logout" href="{{ url_for('blog_admin') }}"
                         class="bg-purple-900 hover:bg-lime-700 active:bg-lime-900 focus:outline-none focus:ring focus:ring-lime-900
-                        text-white py-[3px] px-4 rounded-full"
+                        text-white w-36 max-w-full h-8 rounded-full flex justify-center items-center"
                         >Back<i class="fa-regular fa-circle-left text-sm pl-1"></i>
                     </a>
                 </div>

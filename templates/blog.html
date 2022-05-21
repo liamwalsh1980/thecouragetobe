@@ -50,7 +50,7 @@
                     <a 
                         aria-label="Blog_admin" href="{{ url_for('blog_admin') }}"
                         class="bg-purple-900 hover:bg-lime-700 active:bg-lime-700 focus:outline-none focus:ring focus:ring-lime-700
-                        text-white py-1 px-4 rounded-full"
+                        text-white w-36 max-w-full h-8 rounded-full flex justify-center items-center"
                         >Blog Admin
                     </a>
                 </div>
@@ -58,8 +58,8 @@
                     <a 
                         aria-label="Logout" href="{{ url_for('logout') }}"
                         class="bg-purple-900 hover:bg-lime-700 active:bg-lime-700 focus:outline-none focus:ring focus:ring-lime-700
-                        text-white py-1 px-4 rounded-full"
-                        >Logout <i class="fa-solid fa-arrow-right-from-bracket text-sm"></i>
+                        text-white w-36 max-w-full h-8 rounded-full flex justify-center items-center"
+                        >Logout <i class="fa-solid fa-arrow-right-from-bracket text-sm pl-1"></i>
                     </a>
                 </div>
             {% else %}
