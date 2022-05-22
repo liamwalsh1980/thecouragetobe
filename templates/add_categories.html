@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+{% block content %}
+
+<section>
+    <!-- flash messages with Jinja if statments, with statements and for loops -->
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            {% for message in messages %}
+                <div class="w-full flashes text-center py-4 bg-[#5bc0de] text-white flex justify-center items-center space-x-2">
+                    <i class="fa-solid fa-bolt text-lg text-purple-700"></i>
+                        <h2 class="flash-messages font-bold text-gray-700 text-2xl">
+                            {{ message }}
+                        </h2>
+                    <i class="fa-solid fa-bolt text-lg text-purple-700"></i>
+                </div>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+</section>
+
+<!-- Add category form -->
+<section class="bg-gradient-to-t from-sky-700 to-orange-200 via-gray-400 min-h-screen">
+    <form method="POST" action="{{ url_for('add_categories') }}">
+        <div class="max-w-screen-xl mx-auto p-8">
+            <div class="space-y-4 flex flex-col items-center" aria-labelledby="contact-me">
+                <p class="text-lg md:text-2xl font-bold text-purple-900">
+                    Add Category
+                </p>
+            
+                <div class="w-80 form-group">
+                    <input id="category_name" name="category_name" type="text" minlength="1" maxlength="100" class="validate px-3 py-[6px] form-control" placeholder="New Category Name*" required>
+                </div>
+                
+            </div>
+
+            <div class="py-8 text-center flex flex-row sm:flex-row justify-center gap-x-2 flex-wrap gap-y-4">
+                <div class="flex justify-center items-center">
+                    <button 
+                        type="submit" value="submit"
+                        class="bg-purple-900 hover:bg-lime-700 active:bg-lime-900 focus:outline-none focus:ring focus:ring-lime-900
+                        text-white w-36 max-w-full h-8 rounded-full flex justify-center items-center"
+                        >Add <i class="fa-solid fa-plus text-sm pl-1"></i>
+                    </button>
+                </div>
+                
+                <div class="flex justify-center items-center">
+                    <a 
+                        aria-label="Logout" href="{{ url_for('add_post') }}"
+                        class="bg-purple-900 hover:bg-lime-700 active:bg-lime-900 focus:outline-none focus:ring focus:ring-lime-900
+                        text-white w-36 max-w-full h-8 rounded-full flex justify-center items-center"
+                        >Back<i class="fa-regular fa-circle-left text-sm pl-1"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </form> 
+</section>
+
+{% endblock %}

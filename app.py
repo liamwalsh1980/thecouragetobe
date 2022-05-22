@@ -191,6 +191,19 @@ def categories():
     return render_template("categories.html", categories=categories)
 
 
+@app.route("/add_categories", methods=["GET", "POST"])
+def add_categories():
+    if request.method == "POST":
+        category = {
+            "category_name": request.form.get("category_name")
+        }
+        mongo.db.categories.insert_one(category)
+        flash("New Category Added")
+        return redirect(url_for("categories"))
+
+    return render_template("add_categories.html")
+
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
