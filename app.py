@@ -199,9 +199,30 @@ def add_categories():
         }
         mongo.db.categories.insert_one(category)
         flash("New Category Added")
-        return redirect(url_for("categories"))
+        return redirect(url_for("add_post"))
 
     return render_template("add_categories.html")
+
+
+@app.route("/edit_categories/<category_id>", methods=["GET", "POST"])
+def edit_categories(category_id):
+    if request.method == "POST":
+        change = {
+            "category_name": request.form.get("category_name")
+        }
+        mongo.db.categories.update_one({"_id": ObjectId(category_id)}, {"$set": change})
+        flash("Category Name Successfully Changed")
+        return redirect(url_for("add_post"))
+
+    category = mongo.db.categories.find_one({"_id": ObjectId(category_id)})
+    return render_template("edit_categories.html", category=category)
+
+
+@app.route("/delete_category/<category_id>")
+def delete_category(category_id):
+    mongo.db.categories.delete_one({"_id": ObjectId(category_id)})
+    flash("Category Successfully Deleted")
+    return redirect(url_for("add_post"))
 
 
 if __name__ == "__main__":

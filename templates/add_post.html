@@ -7,11 +7,11 @@
         {% if messages %}
             {% for message in messages %}
                 <div class="w-full flashes text-center py-4 bg-[#5bc0de] text-white flex justify-center items-center space-x-2">
-                    <i class="fa-solid fa-bolt text-lg text-purple-700"></i>
+                    <i class="fa-solid fa-bolt text-lg text-purple-700 mx-4"></i>
                         <h2 class="flash-messages font-bold text-gray-700 text-2xl">
                             {{ message }}
                         </h2>
-                    <i class="fa-solid fa-bolt text-lg text-purple-700"></i>
+                    <i class="fa-solid fa-bolt text-lg text-purple-700 mx-4"></i>
                 </div>
             {% endfor %}
         {% endif %}
@@ -64,7 +64,7 @@
                         aria-label="Current category" href="{{ url_for('categories') }}"
                         class="bg-purple-900 hover:bg-lime-700 active:bg-lime-900 focus:outline-none focus:ring focus:ring-lime-900
                         text-white w-36 max-w-full h-8 rounded-full flex justify-center items-center"
-                        >Categories<i class="fa-solid fa-plus text-sm pl-1"></i>
+                        >Categories
                     </a>
                 </div>
                 <div class="flex justify-center items-center">
