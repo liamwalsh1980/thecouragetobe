@@ -26,13 +26,10 @@
                 <p class="text-lg md:text-2xl font-bold text-purple-900">
                     Add Category
                 </p>
-            
                 <div class="w-80 form-group">
                     <input id="category_name" name="category_name" type="text" minlength="1" maxlength="100" class="validate px-3 py-[6px] form-control" placeholder="New Category Name*" required>
                 </div>
-                
             </div>
-
             <div class="py-8 text-center flex flex-row sm:flex-row justify-center gap-x-2 flex-wrap gap-y-4">
                 <div class="flex justify-center items-center">
                     <button 
@@ -42,7 +39,6 @@
                         >Add <i class="fa-solid fa-plus text-sm pl-1"></i>
                     </button>
                 </div>
-                
                 <div class="flex justify-center items-center">
                     <a 
                         aria-label="Logout" href="{{ url_for('add_post') }}"
