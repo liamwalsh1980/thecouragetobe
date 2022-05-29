@@ -120,12 +120,12 @@ def blog_admin():
     if session["user"]:
         # Admin only can access all
         if session["user"] == "brian":
-            blogs = list(mongo.db.blogs.find().sort("publish_date", -1))
+            blogs = list(mongo.db.blogs.find().sort("_id", -1))
         else:
-            # Logged in users will see just their own films
+            # Logged in users will see just their own posts
             blogs = list(
                 mongo.db.blogs.find(
-                    {"created_by": session["user"]}).sort("publish_date", -1))
+                    {"created_by": session["user"]}).sort("_id", -1))
         return render_template(
             "blog_admin.html", username=username, blogs=blogs)
     return redirect(url_for("login"))
@@ -210,7 +210,8 @@ def edit_categories(category_id):
         change = {
             "category_name": request.form.get("category_name")
         }
-        mongo.db.categories.update_one({"_id": ObjectId(category_id)}, {"$set": change})
+        mongo.db.categories.update_one({"_id": ObjectId(category_id)},
+                                       {"$set": change})
         flash("Category Name Successfully Changed")
         return redirect(url_for("add_post"))
 
