@@ -17,13 +17,11 @@
         {% endif %}
     {% endwith %}
 </section>
-
 <section class="bg-white" aria-labelledby="Blog">
     <div id="hero-image" aria-labelledby="blog" class="min-h-screen">
         <h1 class="text-lg md:text-2xl font-bold py-8 text-center text-purple-200">
             Blog admin for Brian
         </h1>
-
         {% for blog in blogs %}
         <div class="max-w-screen-xl mx-auto px-8 flex flex-col justify-center items-center cursor-pointer" x-data="{ open: false }"> 
             <div class="border-1 border-purple-500 rounded-t-md bg-white p-2 w-full sm:w-5/6 md:w-3/4 lg:w-2/3 space-y-2 p-4" @click="open = ! open">
@@ -31,7 +29,6 @@
                     <div class="text-sm italic font-light text-black">Category: {{ blog.category_name }}</div>
                     <div class="text-sm italic font-light text-black pt-0">Posted by Brian on {{ blog.publish_date }}</div>
                 </div>
-
                 <div class="relative flex justify-center items-center hidden sm:flex">
                     <a 
                         aria-label="Edit" href="{{ url_for('edit_post', post_id=blog._id) }}"
@@ -48,7 +45,6 @@
                         >Delete<i class="fa-solid fa-trash text-xs pl-1"></i>
                     </a>
                 </div>
-
                 <div class="flex justify-start items-center sm:hidden space-x-4">
                     <a 
                         aria-label="Edit" href="{{ url_for('edit_post', post_id=blog._id) }}"
@@ -63,7 +59,6 @@
                         >Delete<i class="fa-solid fa-trash text-xs pl-1"></i>
                     </a>
                 </div>
-
                 <div x-show="open"
                      x-transition:enter="transition ease-out duration-300"
                      x-transition:enter-start="opacity-0 scale-90"
@@ -78,7 +73,6 @@
             </div>
         </div>
         {% endfor %}
-
          <div class="max-w-screen-xl mx-auto px-8 py-8 text-center flex flex-row sm:flex-row justify-center gap-x-2 flex-wrap gap-y-4">
             <div class="flex justify-center items-center">
                 <a 
@@ -107,5 +101,4 @@
         </div>
     </div>
 </section>
-
 {% endblock %}

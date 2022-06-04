@@ -41,7 +41,7 @@ def protecting_you():
 @app.route("/thecouragetobe_blog")
 def thecouragetobe_blog():
     blogs = list(
-        mongo.db.blogs.find().sort("publish_date", -1))
+        mongo.db.blogs.find().sort("_id", -1))
     return render_template("blog.html", blogs=blogs)
 
 

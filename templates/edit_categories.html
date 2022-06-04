@@ -17,7 +17,6 @@
         {% endif %}
     {% endwith %}
 </section>
-
 <!-- Add category form -->
 <section class="bg-gradient-to-t from-sky-700 to-orange-200 via-gray-400 min-h-screen">
     <form method="POST" action="{{ url_for('edit_categories', category_id=category._id) }}">
@@ -26,13 +25,11 @@
                 <p class="text-lg md:text-2xl font-bold text-purple-900">
                     Change Category
                 </p>
-            
                 <div class="w-80 form-group">
-                    <input id="category_name" name="category_name" type="text" value="{{ category.category_name}}" minlength="1" maxlength="100" class="validate px-3 py-[6px] form-control" placeholder="New Category Name*" required>
+                    <input id="category_name" name="category_name" type="text" value="{{ category.category_name}}" minlength="1" maxlength="100" 
+                           class="validate px-3 py-[6px] form-control" placeholder="New Category Name*" required>
                 </div>
-                
             </div>
-
             <div class="py-8 text-center flex flex-row sm:flex-row justify-center gap-x-2 flex-wrap gap-y-4">
                 <div class="flex justify-center items-center">
                     <button 
@@ -42,7 +39,6 @@
                         >Change <i class="fa-solid fa-pen-to-square text-sm pl-1"></i>
                     </button>
                 </div>
-                
                 <div class="flex justify-center items-center">
                     <a 
                         aria-label="Logout" href="{{ url_for('add_post') }}"
