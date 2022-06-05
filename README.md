@@ -1,108 +1,52 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# The courage to be
 
-Welcome Liam Walsh,
+![Image template](readme/images/responsive.png)
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+<a href="http://thecouragetobe.org/" 
+target="_blank">Click here to view The Courage to be live</a>
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
+## Wireframes
+### Homepage
+![Image template](readme/images/index.png)
+### Protecting You Page
+![Image template](readme/images/protecting-you.png)
+### Proctors Model Page
+![Image template](readme/images/proctors-model.png)
 
-## Gitpod Reminders
+## Technologies used
+### Languages 
+* <a href="https://en.wikipedia.org/wiki/HTML" target="_blank">HTML5</a> - The HyperText Markup Language used to provide content to the website. 
+* <a href="https://en.wikipedia.org/wiki/CSS" target="_blank">CSS3</a> - Cascading Style Sheet used to provide custom styling througout the website.
+* <a href="https://alpinejs.dev/" target="_blank">Alpine JS</a> - Alpine is a rugged, minimal tool for composing behavior directly in your markup. Think of it like jQuery for the modern web. 
+* <a href="https://en.wikipedia.org/wiki/Python_(programming_language)" target="_blank">Python3</a> - To create all functions that allow the website to work and interact between the application and mongoDB as well as importing several key dependencies i.e. os, flask, flash, render_template, redirect, request, session, url_for, PyMongo, ObjectId(bson.objectid),generate_password_hash, check_password_hash (werkzeug.security) and env.
+* <a href="https://docs.mongodb.com/drivers/pymongo/">Pymongo</a> - Python API for MongoDB that enables me to link up the data from the back-end database to the front-end appplication.
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+### Frameworks and Libraries 
+* <a href="https://en.wikipedia.org/wiki/JQuery" target="_blank">JQuery</a> - used as a JavaScript library to assist with Javascript to reduce coding. Used for user interaction i.e. contact form. <a href="https://en.wikipedia.org/wiki/Document_Object_Model">
+* <a href="https://en.wikipedia.org/wiki/Flask_(web_framework)" target="_blank">Flask</a> - Flask is a micro web framework written in Python.
+* <a href="https://en.wikipedia.org/wiki/Jinja_(template_engine)" target="_blank">Jinja Templating Language</a> - Jinja is a web template engine for the Python programming language, that assisted me with if statements, for loops and conditional logic. 
+* <a href="https://tailwindui.com/" target="_blank">Tailwind CSS</a> - A utility-first CSS framework packed with classes for all styling needs
 
-`python3 -m http.server`
 
-A blue button should appear to click: _Make Public_,
-
-Another blue button should appear to click: _Open Browser_.
-
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
-
-A blue button should appear to click: _Make Public_,
-
-Another blue button should appear to click: _Open Browser_.
-
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
-
-To log into the Heroku toolbelt CLI:
-
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
-
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
-
-------
-
-## Release History
-
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
-
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
-
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
-
-**July 2 2021:** Remove extensions that are not available in Open VSX.
-
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
-
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
-
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
-
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
-
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
-
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
-
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
-
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
-
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
-
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
-
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
-
-------
-
-## FAQ about the uptime script
-
-**Why have you added this script?**
-
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
-
-**How will this affect me?**
-
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
-
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
-
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
-
-**So….?**
-
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
-
-**Can I opt out?**
-
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
-
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
-
-**Anything more?**
-
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
-
----
-
-Happy coding!
+### Other technologies 
+* <a href="https://developer.chrome.com/docs/devtools/" target="_blank">Chrome DevTools</a> - This tool was very useful for amending code, finding where bugs were coming from and help with all code and console errors during the time of being the feedback form page. Used to examine the overall performance of the site with Lighthouse as well. 
+* <a href="https://balsamiq.com/wireframes/?gclid=CjwKCAjw6fCCBhBNEiwAem5SO0TfrA7AKJnwXKFEJStjRK5qFYRfJ7jLW6Vdt4F1CdcujCZRm9Zr7xoC3oUQAvD_BwE" target="_blank">Balsamiq</a> -  Used to create wireframes for all pages on all screen sizes. 
+* <a href="https://fontawesome.com/" target="_blank">Font Awesome</a> - I used many bespoke icons and social media icons across all pages of the website. 
+* <a href="https://fonts.google.com/" target="_blank">Google Fonts</a> - I used two font families on my website. I used the font Montserrat with sans-serif and fallback for most of the website content and Holtwood One SC with Serif as a fallback for the text logo. Fallbacks will only work if the main fonts fail. 
+* <a href="https://gitpod.io/" target="_blank">Gitpod</a> - Used to complete my HTML, CSS, JavaScript/JQuery and Python coding for my MS3 project.
+* <a href="https://github.com/" target="_blank">Github</a> - GitHub is used to store the projects code after being pushed from Git.
+* <a href="https://git-scm.com/" target="_blank">Git</a> - Git was used for version control by using the Gitpod terminal to commit to Git and Push to GitHub.
+* <a href="https://en.wikipedia.org/wiki/Heroku" target="_blank">Heroku</a> - Heroku is a platform as a service (PaaS) that enables developers to build, run, and operate applications entirely in the cloud.
+* <a href="https://validator.w3.org/" target="_blank">W3C Markup Validation Service</a> - Used to test all HTML coding for all five pages.
+* <a href="https://jigsaw.w3.org/css-validator/" target="_blank">W3C CSS Validation Service</a> - Used to test all CSS coding.
+* <a href="https://jshint.com/" target="_blank">JS Hint</a> - Used to test all Javascript coding.
+* <a href="http://pep8online.com/" target="_blank">Python PEP8 Online</a> - Used to test all Python coding.
+* <a href="https://www.emailjs.com/" target="_blank">Email JS</a> - Used to 
+send email directly from JavaScript - free of charge for up to 200 emails per month.
+* <a href="https://cdnjs.com/" target="_blank">cdnjs</a> - Used to 
+Used to source scripts and links for the base template.
+* <a href="https://werkzeug.palletsprojects.com/en/2.0.x/utils/#module-werkzeug.security" target="_blank">Werkzeug</a> - A comprehensive WSGI (Web Server Gateway Interface) web application library. It began as a simple collection of various utilities for WSGI applications and has become one of the most advanced WSGI utility libraries. 
+* <a href="https://randomkeygen.com/" target="_blank">RandomKeygen</a> - A free tool that offers randomly generated keys and passwords you can use to secure any application, service or device. I used this to generate a password when setting the secret_key password making it a fort knox password. 
+* <a href="https://gauger.io/fonticon/" target="_blank">Font Icon</a> - Sourced the 'Film' Icon 
+* <a href="https://en.wikipedia.org/wiki/MongoDB" target="_blank">MongoDB</a> - MongoDB is a source-available cross-platform document-oriented database program. Classified as a NoSQL database program, MongoDB uses JSON-like documents with optional schemas.
+ 
