@@ -148,6 +148,14 @@ def add_post():
             "category_name": request.form.get("category_name"),
             "blog_name": request.form.get("blog_name"),
             "blog_details": request.form.get("blog_details"),
+            "blog_details_2": request.form.get("blog_details_2"),
+            "blog_details_3": request.form.get("blog_details_3"),
+            "blog_details_4": request.form.get("blog_details_4"),
+            "blog_details_5": request.form.get("blog_details_5"),
+            "blog_details_6": request.form.get("blog_details_6"),
+            "blog_details_7": request.form.get("blog_details_7"),
+            "blog_details_8": request.form.get("blog_details_8"),
+            "blog_details_9": request.form.get("blog_details_9"),
             "publish_date": request.form.get("publish_date"),
             "created_by": session["user"]
         }
@@ -166,6 +174,14 @@ def edit_post(post_id):
             "category_name": request.form.get("category_name"),
             "blog_name": request.form.get("blog_name"),
             "blog_details": request.form.get("blog_details"),
+            "blog_details_2": request.form.get("blog_details_2"),
+            "blog_details_3": request.form.get("blog_details_3"),
+            "blog_details_4": request.form.get("blog_details_4"),
+            "blog_details_5": request.form.get("blog_details_5"),
+            "blog_details_6": request.form.get("blog_details_6"),
+            "blog_details_7": request.form.get("blog_details_7"),
+            "blog_details_8": request.form.get("blog_details_8"),
+            "blog_details_9": request.form.get("blog_details_9"),
             "publish_date": request.form.get("publish_date"),
             "created_by": session["user"]
         }
@@ -229,4 +245,4 @@ def delete_category(category_id):
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
-            debug=False)
+            debug=True)
