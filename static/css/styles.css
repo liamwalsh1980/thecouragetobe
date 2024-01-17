@@ -1224,6 +1224,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   color: rgb(55 48 163 / var(--tw-text-opacity));
 }
 
+.hover\:text-white:hover {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
 .focus\:text-purple-400:focus {
   --tw-text-opacity: 1;
   color: rgb(192 132 252 / var(--tw-text-opacity));
